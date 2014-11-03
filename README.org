@@ -2,8 +2,14 @@
 ** Using
 *** Server side                                                      :python:
 **** TODO Tornado
+- http://www.tornadoweb.org/
 *** Browser side                                                 :JavaScript:
 **** TODO Jquery and JqueryUI
+- http://jquery.com/
+- http://jqueryui.com/
 **** TODO Backbone.js
+- http://backbonejs.org/
 **** TODO Lazy.js
+- http://danieltao.com/lazy.js/
 **** TODO Grunt
+- http://gruntjs.com/
