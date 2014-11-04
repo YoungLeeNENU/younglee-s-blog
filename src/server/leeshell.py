@@ -10,3 +10,5 @@ class LeeshellHandler(tornado.web.RequestHandler):
     def get(self):
         greeting = self.get_argument('commond: ', 'ls, ')
         self.write(greeting + 'man, whoami...')
+    def write_error(self, status_code, **kwargs):
+        self.write("Operation is not defined.")

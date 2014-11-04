@@ -10,4 +10,5 @@ class LeemacsHandler(tornado.web.RequestHandler):
     def get(self):
         greeting = self.get_argument('greeting', 'Hello')    # 第二个作为默认值
         self.write(greeting + ', This is Young Lee\'s web log!')    # GET 请求返回的字符串
-
+    def write_error(self, status_code, **kwargs):
+        self.write("Operation is not defined.")
