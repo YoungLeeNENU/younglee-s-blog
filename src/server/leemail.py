@@ -10,5 +10,9 @@ from tornado.options import define, options
 from resources import LeemacsResources
 
 class LeemailHandler(tornado.web.RequestHandler):
-    def get(self):
-        self.render('leemail.html')        
+    def post(self):
+        noun1 = self.get_argument('noun1')
+        noun2 = self.get_argument('noun2')
+        verb = self.get_argument('verb')
+        noun3 = self.get_argument('noun3')
+        self.render('../client/html/leemail.html')
