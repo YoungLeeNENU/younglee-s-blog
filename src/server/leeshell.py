@@ -5,6 +5,7 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 from tornado.options import define, options
+from resources import LeemacsResources
 
 class LeeshellHandler(tornado.web.RequestHandler):
     def get(self):
