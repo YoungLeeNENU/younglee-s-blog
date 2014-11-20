@@ -1,0 +1,9 @@
+.mini-buffer { height: 60px; width: 100%; }
+.minibuf-menu { height: 50%; width: 100%; }
+.bufinfo-region { height: 100%; width: 8%; float: left; }
+.bufname-region { height: 100%; width: 12%; float: left; }
+.cursorinfo-region { height: 100%; width: 12%; float: left; }
+.tags-region { height: 100%; width: 20%; float: left; }
+.time-region { height: 100%; width: 18%; float: left; }
+.function-region { height: 100%; width: 20%; float: left; }
+.minibuf-text { height: 50%; width: 100%; }

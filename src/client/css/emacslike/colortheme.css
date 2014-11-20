@@ -1,0 +1,10 @@
+html { background-color: #161A1F; }
+.mini-buffer { background-color: #F5F5F5; border-top: 1px solid #696969; }
+.minibuf-menu { background-color: #262626; border-bottom: 1px solid #696969; }
+.bufinfo-region { /* border-right: 1px solid #8b0000; */ }
+.bufname-region { /* border-right: 1px solid #8b0000; */ }
+.cursorinfo-region { /* border-right: 1px solid #8b0000; */ }
+.tags-region { /* border-right: 1px solid #8b0000  */}
+.time-region { /* border-right: 1px solid #8b0000; */ }
+.function-region { /* border-right: 1px solid #8b0000; */ }
+.minibuf-text { background-color: #666666 /* #161A1F */; }
