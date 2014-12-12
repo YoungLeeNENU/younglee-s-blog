@@ -13,3 +13,23 @@
 - http://danieltao.com/lazy.js/
 **** TODO Grunt
 - http://gruntjs.com/
+** leemacs　首页
+*** M-x leeshell 进入 leeshell 导航页
+**** man/whoami 进入我的简历页面
+**** ls/ll 显示当前目录下的子项
+**** cd 进入下级子目录
+**** douban 跳转到我的豆瓣
+**** zhihu 跳转到我的知乎
+**** stackoverflow 跳转到我的 stackoverflow
+**** github 跳转到我的 github
+**** clear 清屏
+**** podcast 我的播客面页
+**** C-x d 进入当前目录的 dired 页面
+**** C-x f 打开当前目录的某个叶子页面
+*** M-x leemail 进入 leemail 发邮件页面
+*** dired 页面
+** 状态码页
+*** 400
+*** 404
+*** 405
+*** 500

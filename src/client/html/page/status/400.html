@@ -1,7 +1,7 @@
 <html>
   <head>
 	<title>400 Bad Request</title>
-	<link rel="stylesheet" href="../../../css/emacslike/emacslike.css" type="text/css" media="screen" />
+	<link rel="stylesheet" href="../../../css/emacslike/minibuffer.css" type="text/css" media="screen" />
 	<link rel="stylesheet" href="../../../css/emacslike/colortheme.css" type="text/css" media="screen" />
   </head>
   <body>
@@ -9,27 +9,37 @@
 	  <div class="linum-mode left-region"></div>
 	  <div class="right-region"></div>
 	</div>
-	<div id="L_buffer400" class="text-buffer status-code">
-	  
-	</div>
+	<div id="L_buffer400" class="text-buffer status-code"></div>
 	<div id="L_badRequest" class="mini-buffer">
 	  <div id="L_mb400" class="minibuf-menu">
-		<div class="bufinfo-region">
-		  U:---
-		</div>
-		<div class="bufname-region">
-		  400 Bas Request.
-		</div>
-		<div class="cursorinfo-region">
-		  All (x, y)
-		</div>
+		<div class="bufinfo-region"><div class="bufinfo-box buf-item"><span id="L_bufinfo">U:---</span></div></div>
+		<div class="bufname-region"><div class="bufname-box buf-item">*Young Lee*</div></div>
 		<div class="tags-region">
-		  (Status-code)
+		  <div id="L_leftBracket" class="left-bracket buf-item"><span>(</span></div>
+		  <div class="tarrow-left buf-item"><div class="buf-icon"><div class="icon-larrow"></div></div></div>
+		  <div class="tags buf-item"><span>TAGS</span></div>
+		  <div class="tarrow-right buf-item"><div class="buf-icon"><div class="icon-rarrow"></div></div></div>
+		  <div id="L_rightBracket" class="right-bracket buf-item"><span>)</span></div>
 		</div>
-		<div class="time-region">
-		  0000-00-00 00:00:00
+		<div class="time-region" class=""><div class="time-box buf-item"><span id="L_time"></span>0000-00-00 00:00</div></div>
+		<div class="function-region">
+		  <div id="L_tagArrowLeft" class=""></div>
+		  <div id="L_lDouban" class="my-douban"></div>
+		  <div id="L_lZhihu" class="my-zhihu"></div>
+		  <div id="L_lStackoverflow" class="my-stackoverflow"></div>
+		  <div id="L_lgithub" class="my-github"></div>
+		  <div id="L_tagArrowRight" class=""></div>
+		  <div id="L_keybinding" class="key-binding"></div>
+		  <div id="L_langSwitch" class="lang-switch">
+			<div id="L_ch" class="lang-ch"></div>
+			<div id="L_en" class="lang-en"></div>
+		  </div>
+		  <div id="L_rss" class="rss">
+			<div class="buf-icon">
+			  <div class="my-rss"></div>
+			</div>
+		  </div>		  
 		</div>
-		<div class="function-region"></div>
 	  </div>
 	  <div class="minibuf-text"></div>
 	</div>
