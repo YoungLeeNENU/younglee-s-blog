@@ -58,15 +58,21 @@
 	width: 8px;
 	float: left;
 }
-.tarrow-left {
+.arrow-left {
 	height: 22px;
 	width: 20px;
 	float: left;
 }
-.tarrow-right {
+.arrow-right {
 	height: 22px;
 	width: 20px;
 	float: left;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
 }
 .right-bracket {
 	height: 22px;
@@ -153,4 +159,10 @@ div.buf-icon div.my-rss:after {
     border-color: #fff;
     top: -9px;
     left: 0;
+}
+.my-douban, .my-zhihu, .my-stackoverflow, .my-github {
+	height: 22px;
+	width: 22px;
+	float: right;
+	cursor: pointer;
 }

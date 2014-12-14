@@ -7,14 +7,14 @@ var _minibuffer = function () {
 };
 
 var _displayTime = function () {
-	var changeTime = function () {
+	var _changeTime = function () {
 		var localTime = new Date(),
 		    timeStr = localTime.toLocaleString();
 		
 		$('#L_time').text(timeStr);
 		
-		setTimeout(changeTime, 1000);
+		setTimeout(_changeTime, 1000);
 	};
 	
-	changeTime();
+	_changeTime();
 };

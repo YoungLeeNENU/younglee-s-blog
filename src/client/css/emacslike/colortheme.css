@@ -26,7 +26,7 @@ html {
 	font-size: 14px;
 	font-family: monaco;
 	color: white;
-/* border: 1px solid #8b0000 */
+	/* border: 1px solid #8b0000; */
 }
 .time-region {
 	font-size: 14px;
@@ -54,10 +54,10 @@ html {
 /* border: 1px solid #8b0000; */
 }
 .arrow-left {
-/* border: 1px solid #8b0000; */
+	/* border: 1px solid #8b0000; */
 }
 .arrow-right {
-/* border: 1px solid #8b0000; */
+	/* border: 1px solid #8b0000; */
 }
 .tags {
 /* border: 1px solid #8b0000; */
@@ -66,14 +66,17 @@ html {
 	/* border: 1px solid #4b6f3c; */
 }
 .lang-ch {
-	border: 1px solid #ff8c00;
+	/* border: 1px solid #ff8c00; */
 }
 .lang-en {
-	border: 1px solid #ffff00;
+	/* border: 1px solid #ffff00; */
 }
 .rss {
 /* border: 1px solid #4b6f3c; */
 }
 .key-binding {
-	border: 1px solid #ff8c00;
+	/* border: 1px solid #ff8c00; */
+}
+.my-douban, .my-zhihu, .my-stackoverflow, .my-github {
+	/* border: 1px solid #ff8c00; */
 }
