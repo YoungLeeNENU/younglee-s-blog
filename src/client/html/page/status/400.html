@@ -21,24 +21,28 @@
 		  <div class="tarrow-right buf-item"><div class="buf-icon"><div class="icon-rarrow"></div></div></div>
 		  <div id="L_rightBracket" class="right-bracket buf-item"><span>)</span></div>
 		</div>
-		<div class="time-region" class=""><div class="time-box buf-item"><span id="L_time"></span>0000-00-00 00:00</div></div>
+		<div class="time-region" class=""><div class="time-box buf-item"><span id="L_time"></span></div></div>
 		<div class="function-region">
-		  <div id="L_tagArrowLeft" class=""></div>
-		  <div id="L_lDouban" class="my-douban"></div>
-		  <div id="L_lZhihu" class="my-zhihu"></div>
-		  <div id="L_lStackoverflow" class="my-stackoverflow"></div>
-		  <div id="L_lgithub" class="my-github"></div>
-		  <div id="L_tagArrowRight" class=""></div>
-		  <div id="L_keybinding" class="key-binding"></div>
+		  <div class="links">
+			<div id="L_tagArrowLeft" class=""></div>
+			<div class="link-icons">
+			  <div id="L_lDouban" class="my-douban"></div>
+			  <div id="L_lZhihu" class="my-zhihu"></div>
+			  <div id="L_lStackoverflow" class="my-stackoverflow"></div>
+			  <div id="L_lgithub" class="my-github"></div>
+			</div>
+			<div id="L_tagArrowRight" class=""></div>			
+		  </div>
 		  <div id="L_langSwitch" class="lang-switch">
-			<div id="L_ch" class="lang-ch"></div>
-			<div id="L_en" class="lang-en"></div>
+			<div id="L_en" class="lang-en">E</div>
+			<div id="L_ch" class="lang-ch">C</div>
 		  </div>
 		  <div id="L_rss" class="rss">
 			<div class="buf-icon">
 			  <div class="my-rss"></div>
 			</div>
-		  </div>		  
+		  </div>
+		  <div id="L_keybinding" class="key-binding"></div>
 		</div>
 	  </div>
 	  <div class="minibuf-text"></div>
@@ -46,4 +50,5 @@
   </body>
   <script type="text/javascript" src="../../../js/tools/jquery-2.1.0.min.js"></script>
   <script type="text/javascript" src="../../../js/tools/underscore-min.js"></script>
+  <script type="text/javascript" src="../../../js/emacs/minibuffer.js"></script>
 </html>

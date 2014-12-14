@@ -1,4 +1,7 @@
 .mini-buffer {
+	position: fixed;
+	right: 0;
+	bottom: 0;
 	height: 44px;
 	width: 100%;
 }
@@ -23,12 +26,12 @@
 }
 .time-region {
 	height: 100%;
-	width: 180px;
+	width: 220px;
 	float: left;
 }
 .function-region {
 	height: 100%;
-	width: 430px;
+	width: 400px;
 	float: right;
 }
 .minibuf-text {
@@ -105,34 +108,37 @@ div.buf-icon div.icon-rarrow {
 	height: 22px;
 	width: 22px;
 	float: right;
+	cursor: pointer;
 }
 .lang-switch {
-	height: 22px;
-	width: 44px;
-	float: right;
+	/* height: 100%; */
+	/* width: 50px; */
+	/* float: right; */
 }
 .lang-ch {
 	height: 22px;
-	width: 22px;
+	width: 24px;
 	float: right;
 }
 .lang-en {
 	height: 22px;
-	width: 22px;
+	width: 24px;
 	float: right;
 }
-.rss {
-	cursor: pointer;
+.key-binding {
+	height: 22px;
+	width: 30px;
+	float: right;
 }
 div.buf-icon div.my-rss {
-    width: 3px;
+    width: 2px;
     height: 3px;
     border-radius: 8px;
     -moz-border-radius: 8px;
     -webkit-border-radius: 8px;
     background: #fff;
     position: absolute;
-	margin: 13px 0px 0px 5px;
+	margin: 14px 0px 0px 5px;
 }
 div.buf-icon div.my-rss:after {
     content: '';

@@ -1,25 +1,79 @@
-html { background-color: #161A1F; }
-.mini-buffer { background-color: #F5F5F5; border-top: 1px solid #696969; }
-.minibuf-menu { font-size: 14px; background-color: #262626; border-bottom: 1px solid #696969; }
-.bufinfo-region { font-size: 14px; font-family: monaco; color: white; /* border: 1px solid #8b0000; */ }
-.bufname-region { font-size: 14px; font-family: monaco; color: white; /* border: 1px solid #8b0000; */ }
-.tags-region { font-size: 14px; font-family: monaco; color: white; /* border: 1px solid #8b0000 */ }
-.time-region { font-size: 14px; font-family: monaco; color: white; /* border: 1px solid #8b0000; */ }
-.function-region { font-size: 14px; font-family: monaco; color: white; /* border: 1px solid #8b0000; */ }
-.minibuf-text { background-color: #666666 /* #161A1F */; }
-.bufinfo-box { /* border: 1px solid #8b0000; */ }
-.bufname-box { /* border: 1px solid #8b0000; */ }
-.left-bracket { /* border: 1px solid #8b0000; */ }
-.arrow-left { /* border: 1px solid #8b0000; */ }
-.arrow-right { /* border: 1px solid #8b0000; */ }
-.tags { /* border: 1px solid #8b0000; */ }
-.lang-switch { /* border: 1px solid #4b6f3c; */ }
-.lang-ch {
+html {
+	background-color: #161A1F;
+}
+.mini-buffer {
+	background-color: #F5F5F5;
+	border-top: 1px solid #696969;
+}
+.minibuf-menu {
+	font-size: 14px;
+	background-color: #262626;
+	border-bottom: 1px solid #696969;
+}
+.bufinfo-region {
+	font-size: 14px;
+	font-family: monaco;
+	color: white;
+/* border: 1px solid #8b0000; */
+}
+.bufname-region {
+	font-size: 14px;
+	font-family: monaco;
+	color: white;
+/* border: 1px solid #8b0000; */
+}
+.tags-region {
+	font-size: 14px;
+	font-family: monaco;
+	color: white;
+/* border: 1px solid #8b0000 */
+}
+.time-region {
+	font-size: 14px;
+	font-family: monaco;
+	color: white;
+	/* border: 1px solid #8b0000; */
+}
+.function-region {
+	font-size: 14px;
+	font-family: monaco;
+	color: white;
+	/* border: 1px solid #8b0000; */
+}
+.minibuf-text {
+	background-color:
+	#666666 /* #161A1F */;
+}
+.bufinfo-box {
+/* border: 1px solid #8b0000; */
+}
+.bufname-box {
+/* border: 1px solid #8b0000; */
+}
+.left-bracket {
+/* border: 1px solid #8b0000; */
+}
+.arrow-left {
+/* border: 1px solid #8b0000; */
+}
+.arrow-right {
+/* border: 1px solid #8b0000; */
+}
+.tags {
+/* border: 1px solid #8b0000; */
+}
+.lang-switch {
 	/* border: 1px solid #4b6f3c; */
+}
+.lang-ch {
+	border: 1px solid #ff8c00;
 }
 .lang-en {
-	/* border: 1px solid #4b6f3c; */
+	border: 1px solid #ffff00;
 }
 .rss {
-	/* border: 1px solid #4b6f3c; */
+/* border: 1px solid #4b6f3c; */
+}
+.key-binding {
+	border: 1px solid #ff8c00;
 }
