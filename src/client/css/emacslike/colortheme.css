@@ -3,7 +3,8 @@ html {
 }
 .mini-buffer {
 	background-color: #F5F5F5;
-	border-top: 1px solid #696969;
+    border-top: 1px solid #696969;
+    box-shadow: 0 10px 20px 10px black;
 }
 .minibuf-menu {
 	font-size: 14px;
