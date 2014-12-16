@@ -7,7 +7,7 @@ import tornado.web
 from tornado.options import define, options
 from resources import LeemacsResources
 
-class WhoamiHandler(tornado.web.RequestHandler):
+class manPageHandler(tornado.web.RequestHandler):
     def get(self):
         aboutme = self.get_argument('', '李旸:')
         self.write(aboutme + '1991年程序员')
