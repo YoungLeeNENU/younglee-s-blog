@@ -81,3 +81,14 @@ html {
 .my-douban, .my-zhihu, .my-stackoverflow, .my-github {
 	/* border: 1px solid #ff8c00; */
 }
+.control-meta {
+	/* border: 1px solid #ff8c00; */
+}
+.after-metax {
+	/* border: 1px solid #ff8c00; */
+}
+.monaco {
+	font-size: 14px;
+	font-family: monaco;
+	color: white;
+}

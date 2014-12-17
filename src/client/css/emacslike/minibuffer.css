@@ -166,3 +166,9 @@ div.buf-icon div.my-rss:after {
 	float: right;
 	cursor: pointer;
 }
+.control-meta {
+	height: 22px; min-width: 40px;
+}
+.after-metax {
+	height: 22px; min-width: 40px;	
+}
