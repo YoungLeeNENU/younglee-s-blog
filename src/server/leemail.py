@@ -9,7 +9,7 @@ import tornado.web
 from tornado.options import define, options
 from resources import LeemacsResources
 
-class LeemailHandler(tornado.web.RequestHandler):
+class blogEmailHandler(tornado.web.RequestHandler):
     def post(self):
         noun1 = self.get_argument('noun1')
         noun2 = self.get_argument('noun2')

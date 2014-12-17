@@ -7,7 +7,7 @@ import tornado.web
 from tornado.options import define, options
 from resources import LeemacsResources
 
-class LeemacsHandler(tornado.web.RequestHandler, LeemacsResources):
+class blogEmacsHandler(tornado.web.RequestHandler, LeemacsResources):
     def get(self):
         self.render('../client/html/leemacs.html')
         # greeting = self.get_argument('greeting', 'Hello')    # 第二个作为默认值

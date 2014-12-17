@@ -136,6 +136,11 @@ div.buf-icon div.icon-rarrow {
 	width: 30px;
 	float: right;
 }
+.key-binding {
+	height: 22px;
+	width: 30px;
+	float: right;
+}
 div.buf-icon div.my-rss {
     width: 2px;
     height: 3px;
