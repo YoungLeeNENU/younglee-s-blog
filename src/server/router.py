@@ -1,5 +1,5 @@
-#!/usr/bin/python
 #-*- coding:utf-8 -*-
+#!/usr/bin/python
 import tornado.httpserver
 import tornado.ioloop
 import tornado.options
