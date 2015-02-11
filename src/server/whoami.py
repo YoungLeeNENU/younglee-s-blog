@@ -11,5 +11,5 @@ class manPageHandler(tornado.web.RequestHandler):
     def get(self):
         aboutme = self.get_argument('', '李旸:')
         self.write(aboutme + '1991年程序员')
-    def write_error(self, status_code, **kwargs):
+    def write_error(self, status_code, **kwargsd):
         self.write("Operation is not defined.")

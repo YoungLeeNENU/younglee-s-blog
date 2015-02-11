@@ -7,7 +7,7 @@ import tornado.web
 from tornado.options import define, options
 from resources import LeemacsResources
 
-class blogEmacsHandler(tornado.web.RequestHandler):
+class blogEshellHandler(tornado.web.RequestHandler):
     def get(self):
         greeting = self.get_argument('commond: ', 'ls, ')
         self.write(greeting + 'man, whoami...')
