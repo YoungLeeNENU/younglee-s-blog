@@ -1,20 +1,12 @@
 $(document).ready(function () {
-	_minibuffer();
+	_miniBufTime();
 });
 
-var _minibuffer = function () {
-	_displayTime();
-};
-
-var _displayTime = function () {
-	var _changeTime = function () {
+var _miniBufTime = function () {
+	$('#L_time').heartbeat(1000, function () {
 		var localTime = new Date(),
 		    timeStr = localTime.toLocaleString();
 		
-		$('#L_time').text(timeStr);
-		
-		setTimeout(_changeTime, 1000);
-	};
-	
-	_changeTime();
+		$(this).text(timeStr);	
+	});
 };
