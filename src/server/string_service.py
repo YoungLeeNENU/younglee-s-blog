@@ -23,12 +23,8 @@ class WrapHandler(tornado.web.RequestHandler):
 
 if __name__ == '__main__':
     tornado.options.parse_command_line()
-    app = tornado.web.Application(
-        handlers = [
-            (r'/reverse/(\w+)', ReverseHandler),
-            (r'/wrap', WrapHandler)
-            ]
-        )
+    app = tornado.web.Application(handlers = [(r'/reverse/(\w+)', ReverseHandler),
+                                              (r'/wrap', WrapHandler)])
     http_server = tornado.httpserver.HTTPServer(app)
     http_server.listen(options.port)
     tornado.ioloop.IOLoop.instance().start()
