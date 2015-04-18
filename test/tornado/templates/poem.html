@@ -3,8 +3,8 @@
     <head><title>Poem Maker Pro</title></head>
     <body>
         <h1>Your poem</h1>
-        <p>Two {{ escape(roads) }} diverged in a {{ wood }}, and I—<br>
+        <p>Two {{roads[::-1]}} diverged in a {{wood[::-1]}}, and I—<br>
 		  I took the one less travelled by,<br>
-		  And that has {{ made }} all the {{ difference }}.</p>
+		  And that has {{made[::-1]}} all the {{difference[::-1]}}.</p>
     </body>
 </html>

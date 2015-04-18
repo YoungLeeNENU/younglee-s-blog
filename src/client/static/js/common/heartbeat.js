@@ -64,10 +64,6 @@
 		return this;
 	};
 
-	$.delay =function (interval, callback) {
-		
-	};
-
 	/**
 	 * Use setInterval to make one pseudo heart beat.
 	 * @param { Number } interval: milliseconds

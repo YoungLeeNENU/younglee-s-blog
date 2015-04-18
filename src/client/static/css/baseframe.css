@@ -1,0 +1,41 @@
+@charset "UTF-8";
+/*! 定义基础 frame 的位置样式 */
+#base-frame {
+  top: 0px;
+  left: 0px;
+  padding: 10px 10px 10px 10px;
+  height: 100%;
+  z-index: 1; }
+  #base-frame #homepage-txt {
+    z-index: 3;
+    position: fixed;
+    top: 50%;
+    margin-top: -127px;
+    width: 100%;
+    left: 0px; }
+    #base-frame #homepage-txt #yl-txt {
+      text-align: center;
+      padding-top: 10px;
+      padding-bottom: 8px; }
+    #base-frame #homepage-txt #pn-txt {
+      text-align: center;
+      padding-top: 8px;
+      padding-bottom: 10px; }
+  #base-frame .edit-line {
+    width: 100%;
+    height: 28px;
+    display: block;
+    padding-top: 4px; }
+    #base-frame .edit-line .user {
+      color: white;
+      font-family: DejaVu Sans Mono;
+      font-size: 16px; }
+    #base-frame .edit-line .path {
+      color: white;
+      font-family: DejaVu Sans Mono;
+      font-size: 16px; }
+    #base-frame .edit-line #blink-cursor {
+      height: 19px;
+      width: 8px; }
+
+/*# sourceMappingURL=baseframe.css.map */

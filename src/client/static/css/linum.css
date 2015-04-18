@@ -1,0 +1,12 @@
+@charset "UTF-8";
+/*! 行号区域 */
+#linum {
+  z-index: 4;
+  position: fixed;
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 24px;
+  border-right: 5px solid #3D3D3D; }
+
+/*# sourceMappingURL=linum.css.map */

@@ -1,0 +1,14 @@
+/*! 定义 minibuffer 的位置样式 */
+$mb-height: 68px;
+$mb-width: 100%;
+$base-zi: 1;
+$mb-zi: $base-zi + 4;
+
+#minibuffer {
+	position: fixed;
+    right: 0px;
+    bottom: 0px;
+	height: $mb-height;
+    width: $mb-width;
+	z-index: $mb-zi;
+}

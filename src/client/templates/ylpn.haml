@@ -1,0 +1,28 @@
+!!! 5
+-# 每个输出页面只包含自己独特的内容就行了
+{% extends "base.html" %}
+
+{% block title %}
+%title { YLPN }
+{% end %}
+
+{% block frame %}
+%div{:class => "edit-line"}
+  %span{:class => "user"} root@ylpn:
+  %span{:class => "path"} ~#&nbsp;&nbsp;
+  %div{:id => "blink-cursor", :class => "cursor"}
+{% end %}
+
+{% block homepage %}
+%h1{:id => "ylpn"} YoungLee's Personal Network
+%div{:id => "yl-txt"}
+  %span{:id => "yl-txt", :class => "yl-theme"} YoungLee
+  %span{:id => "yl-dot", :class => "yl-theme"} '
+  %span{:id => "yl-s", :class => "yl-theme"} s
+%span{:id => "pn-txt"} Personal Network
+{% end %}
+
+{% block dynamic_script %}
+%script{:type => "text/javascript", :src => "{{ static_url('js/common/heartbeat.js') }}"}
+%script{:type => "text/javascript", :src => "{{ static_url('js/common/cursor.js') }}"}
+{% end %}

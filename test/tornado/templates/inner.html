@@ -1,0 +1,13 @@
+{% extends "hello.html" %}
+
+{% block header %}
+    <h1>{{ header_text }}</h1>
+{% end %}
+
+{% block footer %}
+    <p>{{ footer_text }}</p>
+{% end %}
+
+{% block dynamicScript %}
+    <script type="text/javascript" src="{{ static_url("js/test.js") }}"></script>
+{% end %}	

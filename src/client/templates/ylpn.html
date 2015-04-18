@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}
+<title>{ YLPN }</title>
+{% end %}
+{% block frame %}
+<div class='edit-line'>
+  <span class='user'>root@ylpn:</span>
+  <span class='path'>~#&nbsp;&nbsp;</span>
+  <div class='cursor' id='blink-cursor'></div>
+</div>
+{% end %}
+{% block homepage %}
+<h1 id='ylpn'>YoungLee's Personal Network</h1>
+<div id='yl-txt'>
+  <span class='yl-theme' id='yl-txt'>YoungLee</span>
+  <span class='yl-theme' id='yl-dot'>'</span>
+  <span class='yl-theme' id='yl-s'>s</span>
+</div>
+<span id='pn-txt'>Personal Network</span>
+{% end %}
+{% block dynamic_script %}
+<script src="{{ static_url('js/common/heartbeat.js') }}" type='text/javascript'></script>
+<script src="{{ static_url('js/common/cursor.js') }}" type='text/javascript'></script>
+{% end %}

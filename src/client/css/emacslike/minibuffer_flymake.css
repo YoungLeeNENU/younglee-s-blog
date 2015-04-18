@@ -1,0 +1,179 @@
+.mini-buffer {
+	position: fixed;
+	right: 0;
+	bottom: 0;
+	height: 44px;
+	width: 100%;
+}
+.minibuf-menu {
+	height: 50%;
+	width: 100%;
+}
+.bufinfo-region {
+	height: 100%;
+	width: 80px;
+	float: left;
+}
+.bufname-region {
+	height: 100%;
+	width: 180px;
+	float: left;
+}
+.tags-region {
+	height: 100%;
+	width: 440px;
+	float: left;
+}
+.time-region {
+	height: 100%;
+	width: 220px;
+	float: left;
+}
+.function-region {
+	height: 100%;
+	width: 400px;
+	float: right;
+}
+.minibuf-text {
+	height: 50%;
+	width: 100%;
+}
+.buf-item {
+	margin: 2px 0px 0px 10px;
+}
+.bufinfo-box {
+	height: 22px;
+	width: 60px;
+}
+.bufname-box {
+	height: 22px;
+	width: 80%;
+}
+.time-box {
+	height: 22px;
+	width: 100%;
+}
+.left-bracket {
+	height: 22px;
+	width: 8px;
+	float: left;
+}
+.arrow-left {
+	height: 22px;
+	width: 20px;
+	float: left;
+}
+.arrow-right {
+	height: 22px;
+	width: 20px;
+	float: left;
+}
+.fl {
+	float: left;
+}
+.fr {
+	float: right;
+}
+.right-bracket {
+	height: 22px;
+	width: 8px;
+	float: left;
+}
+.tags {
+	height: 22px;
+	width: 100px;
+	float: left;
+}
+div.buf-icon div.icon-larrow {
+    width: 5px;
+    height: 5px;
+    border: solid #fff;
+    border-width: 4px 4px 0 0;
+    -webkit-transform: rotate(-135deg);
+    -moz-transform: rotate(-135deg);
+    -ms-transform: rotate(-135deg);
+    -o-transform: rotate(-135deg);
+    transform: rotate(-135deg);
+    margin: 5px 0 0 7px;
+	cursor: pointer;
+}
+div.buf-icon div.icon-rarrow {
+    width: 5px;
+    height: 5px;
+    border: solid #fff;
+    border-width: 4px 4px 0 0;
+    -webkit-transform: rotate(45deg);
+    -moz-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    -o-transform: rotate(45deg);
+    transform: rotate(45deg);
+    margin: 5px 0 0 7px;
+	cursor: pointer;
+}
+.rss {
+	height: 22px;
+	width: 22px;
+	float: right;
+	cursor: pointer;
+}
+.lang-switch {
+	/* height: 100%; */
+	/* width: 50px; */
+	/* float: right; */
+}
+.lang-ch {
+	height: 22px;
+	width: 24px;
+	float: right;
+}
+.lang-en {
+	height: 22px;
+	width: 24px;
+	float: right;
+}
+.key-binding {
+	height: 22px;
+	width: 30px;
+	float: right;
+}
+.key-binding {
+	height: 22px;
+	width: 30px;
+	float: right;
+}
+div.buf-icon div.my-rss {
+    width: 2px;
+    height: 3px;
+    border-radius: 8px;
+    -moz-border-radius: 8px;
+    -webkit-border-radius: 8px;
+    background: #fff;
+    position: absolute;
+	margin: 14px 0px 0px 5px;
+}
+div.buf-icon div.my-rss:after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 0 60px 0 0;
+    -moz-border-radius: 0 60px 0 0;
+    -webkit-border-radius: 0 60px 0 0;
+    border-style: double;
+    border-width: 7px 7px 0 0;
+    border-color: #fff;
+    top: -9px;
+    left: 0;
+}
+.my-douban, .my-zhihu, .my-stackoverflow, .my-github {
+	height: 22px;
+	width: 22px;
+	float: right;
+	cursor: pointer;
+}
+.control-meta {
+	height: 22px; min-width: 40px;
+}
+.after-metax {
+	height: 22px; min-width: 40px;	
+}

@@ -1,0 +1,11 @@
+@charset "UTF-8";
+/*! 定义 minibuffer 的位置样式 */
+#minibuffer {
+  position: fixed;
+  right: 0px;
+  bottom: 0px;
+  height: 68px;
+  width: 100%;
+  z-index: 5; }
+
+/*# sourceMappingURL=minibuffer.css.map */

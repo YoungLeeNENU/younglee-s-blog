@@ -1,0 +1,35 @@
+body {
+  background-color: #161A1F; }
+
+#ylpn {
+  display: none; }
+
+.yl-theme {
+  font-family: DejaVu Serif;
+  font-weight: bold;
+  font-size: 94px;
+  color: #ee4000; }
+
+#yl-txt, #yl-s {
+  text-shadow: 3px 3px 3px black; }
+
+#yl-dot {
+  text-shadow: none; }
+
+#pn-txt {
+  display: block;
+  font-family: DejaVu Serif;
+  font-weight: bold;
+  font-size: 94px;
+  color: #4682b4;
+  text-shadow: 5px 5px 5px black; }
+
+#blink-cursor {
+  background-color: orange; }
+
+#minibuffer {
+  background-color: #161A1F;
+  border-top: 1px solid #696969;
+  box-shadow: 0 10px 20px 10px black; }
+
+/*# sourceMappingURL=theme.css.map */

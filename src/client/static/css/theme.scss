@@ -1,0 +1,49 @@
+$frame-color: #161A1F;
+$ylpn-txt: #e8e8e8;
+$yl-txt: #ee4000;
+$cursor-color: #ee4000;
+$pn-txt: #4682b4;
+$mb-top: #696969;
+$mb-shadow: black;
+
+body {
+	background-color: $frame-color;
+}
+
+#ylpn {
+	display: none;
+}
+
+.yl-theme {
+	font-family: DejaVu Serif;
+    font-weight: bold;
+	font-size: 94px;
+    color: $yl-txt;
+}
+
+#yl-txt, #yl-s {
+	text-shadow: 3px 3px 3px black;
+}
+
+#yl-dot {
+	text-shadow: none;
+}
+   
+#pn-txt {
+	display: block;
+	font-family: DejaVu Serif;
+    font-weight: bold;
+	font-size: 94px;	
+	color: $pn-txt;
+	text-shadow: 5px 5px 5px black;
+}
+
+#blink-cursor {
+	background-color: orange;
+}
+
+#minibuffer {
+	background-color: $frame-color;
+	border-top: 1px solid $mb-top;
+    box-shadow: 0 10px 20px 10px $mb-shadow;
+}

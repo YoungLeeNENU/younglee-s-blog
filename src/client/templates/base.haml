@@ -1,0 +1,29 @@
+!!! 5
+-# 基础页面完成通用内容的构建
+%html
+  %head
+    {% block res %}{% end %}
+    %link{:rel => "stylesheet", :href => "{{ static_url('css/theme.css') }}", :type => "text/css", :media => "screen"}
+    %link{:rel => "stylesheet", :href => "{{ static_url('css/minibuffer.css') }}", :type => "text/css", :media => "screen"}
+    %link{:rel => "stylesheet", :href => "{{ static_url('css/baseframe.css') }}", :type => "text/css", :media => "screen"}
+    %link{:rel => "stylesheet", :href => "{{ static_url('css/linum.css') }}", :type => "text/css", :media => "screen"}
+    %link{:rel => "icon", :href => "{{ static_url('image/ylpn.ico') }}", :type => "image/png"}
+    {% block title %}
+    %title { YLPN }
+    {% end %}
+  %body
+    -# %div{:id => "linum"}
+    -# base frame
+    %div{:id => "base-frame"}
+      {% block frame %}{% end %}
+      %div{:id => "homepage-txt"}
+        {% block homepage %}{% end %}
+    -# minibuffer
+    %div{:id => "minibuffer"}
+      %div{:id => "mb-menu"}
+      %div{:id => "mb-content"}
+    -# js files
+    %script{:type => "text/javascript", :src => "{{ static_url('js/tools/underscore-min.js') }}"}
+    %script{:type => "text/javascript", :src => "{{ static_url('js/tools/backbone-min.js') }}"}
+    %script{:type => "text/javascript", :src => "{{ static_url('js/tools/jquery-2.1.0.min.js') }}"}
+    {% block dynamic_script %}{% end %}

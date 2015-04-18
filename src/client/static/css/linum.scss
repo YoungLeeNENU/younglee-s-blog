@@ -1,0 +1,13 @@
+/*! 行号区域 */
+$base-zi: 1;
+$linum-zi: $base-zi + 3;
+
+#linum {
+	z-index: $linum-zi;
+	position: fixed;
+    left: 0px;
+	top: 0px;
+    height: 100%;
+	width: 24px;
+    border-right: 5px solid #3D3D3D;
+}
