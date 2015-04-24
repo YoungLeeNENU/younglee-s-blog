@@ -27,15 +27,14 @@
     display: block;
     padding-top: 4px; }
     #base-frame .edit-line .user {
-      color: white;
       font-family: DejaVu Sans Mono;
       font-size: 16px; }
     #base-frame .edit-line .path {
-      color: white;
       font-family: DejaVu Sans Mono;
       font-size: 16px; }
     #base-frame .edit-line #blink-cursor {
       height: 19px;
-      width: 8px; }
+      display: inline;
+      padding-left: 8px; }
 
 /*# sourceMappingURL=baseframe.css.map */

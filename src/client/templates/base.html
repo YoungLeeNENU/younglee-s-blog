@@ -19,12 +19,41 @@
       </div>
     </div>
     <div id='minibuffer'>
-      <div id='mb-menu'></div>
+      <div id='mb-menu'>
+        <div id='share' title='分享'>
+          <i id='share-icon'>&#xf012f;</i>
+        </div>
+        <ul class='menu' id='site-menu'>
+          <li class='menu-li'>
+            <a class='domain' href='javascript:void(0)'>{% block domain %}{% end %}</a>
+          </li>
+          <li class='menu-li'>
+            <span class='time'>&nbsp;</span>
+          </li>
+        </ul>
+        <div id='links'>
+          <i class='link-to' id='hotkey-icon' title='帮助'>
+            <a href='javascript:void(0)'>&#xf0143;</a>
+          </i>
+          <i class='link-to' id='douban-icon' title='豆瓣'>
+            <a href='http://www.douban.com/people/lee_young/'>豆</a>
+          </i>
+          <i class='link-to' id='github-icon' title='github'>
+            <a href='https://github.com/YoungLeeNENU'>&#xf01ca;</a>
+          </i>
+          <i class='link-to' id='rss-icon' title='订阅'>
+            <a href='javascript:void(0)'>&#xf01bc;</a>
+          </i>
+        </div>
+      </div>
       <div id='mb-content'></div>
     </div>
+    <script src="{{ static_url('js/tools/jquery-2.1.0.min.js') }}" type='text/javascript'></script>
     <script src="{{ static_url('js/tools/underscore-min.js') }}" type='text/javascript'></script>
     <script src="{{ static_url('js/tools/backbone-min.js') }}" type='text/javascript'></script>
-    <script src="{{ static_url('js/tools/jquery-2.1.0.min.js') }}" type='text/javascript'></script>
+    <script src="{{ static_url('js/common/heartbeat.js') }}" type='text/javascript'></script>
+    <script src="{{ static_url('js/common/time.js') }}" type='text/javascript'></script>
+    <script src="{{ static_url('js/common/cursor.js') }}" type='text/javascript'></script>
     {% block dynamic_script %}{% end %}
   </body>
 </html>

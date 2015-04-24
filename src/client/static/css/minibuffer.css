@@ -1,11 +1,62 @@
 @charset "UTF-8";
 /*! 定义 minibuffer 的位置样式 */
+@font-face {
+  font-family: 'iconfont';
+  src: url("../image/icon/iconfont.eot");
+  /* IE9*/
+  src: url("../image/icon/iconfont.eot?#iefix") format("embedded-opentype"), url("../image/icon/iconfont.woff") format("woff"), url("../image/icon/iconfont.ttf") format("truetype"), url("../image/icon/iconfont.svg#iconfont") format("svg");
+  /* iOS 4.1- */ }
 #minibuffer {
   position: fixed;
   right: 0px;
   bottom: 0px;
-  height: 68px;
+  height: 64px;
   width: 100%;
   z-index: 5; }
+  #minibuffer #mb-menu {
+    width: 100%;
+    height: 32px;
+    display: block; }
+    #minibuffer #mb-menu #share {
+      display: inline;
+      position: relative;
+      cursor: pointer;
+      padding: 10px 16px 8px 16px; }
+    #minibuffer #mb-menu #site-menu {
+      display: inline;
+      list-style: none;
+      margin: 0;
+      padding: 0; }
+      #minibuffer #mb-menu #site-menu .menu-li {
+        display: inline;
+        zoom: 1;
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        line-height: 32px; }
+        #minibuffer #mb-menu #site-menu .menu-li .domain {
+          padding-left: 18px;
+          padding-right: 18px;
+          padding-top: 7px;
+          padding-bottom: 7px;
+          text-decoration: none; }
+        #minibuffer #mb-menu #site-menu .menu-li .time {
+          margin-left: 32px;
+          margin-right: 32px;
+          padding-left: 16px;
+          padding-right: 16px;
+          padding-top: 7px;
+          padding-bottom: 7px; }
+    #minibuffer #mb-menu #links {
+      float: right;
+      margin-right: 16px;
+      display: inline;
+      position: relative;
+      cursor: pointer;
+      padding: 4px 16px 8px 16px; }
+  #minibuffer #mb-content {
+    width: 100%;
+    height: 31px;
+    display: block; }
 
 /*# sourceMappingURL=minibuffer.css.map */

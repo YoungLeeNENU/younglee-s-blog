@@ -9,7 +9,7 @@
 {% block frame %}
 %div{:class => "edit-line"}
   %span{:class => "user"} root@ylpn:
-  %span{:class => "path"} ~#&nbsp;&nbsp;
+  %span{:class => "path"} ~#&nbsp;
   %div{:id => "blink-cursor", :class => "cursor"}
 {% end %}
 
@@ -22,7 +22,10 @@
 %span{:id => "pn-txt"} Personal Network
 {% end %}
 
+{% block domain %}
+{{ domain }}
+{% end %}
+
 {% block dynamic_script %}
-%script{:type => "text/javascript", :src => "{{ static_url('js/common/heartbeat.js') }}"}
-%script{:type => "text/javascript", :src => "{{ static_url('js/common/cursor.js') }}"}
+%script{:type => "text/javascript", :src => "{{ static_url('js/page/homepage/homepage.js') }}"}  
 {% end %}

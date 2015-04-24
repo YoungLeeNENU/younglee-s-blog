@@ -33,18 +33,17 @@ $hp-zi: $base-zi + 2;
 		display: block;
         padding-top: 4px;
         .user {
-			color: white;
             font-family: DejaVu Sans Mono;
             font-size: 16px;
 		}
         .path {
-			color: white;
             font-family: DejaVu Sans Mono;
             font-size: 16px;
 		}
         #blink-cursor {
 			height: 19px;
-            width: 8px;
+			display: inline;
+            padding-left: 8px;
 		}
 	}
 }
