@@ -3,21 +3,23 @@
 //     (c) 2009-2014 Jeremy Ashkenas, DocumentCloud and Investigative Reporters & Editors
 //     Underscore may be freely distributed under the MIT license.
 
+//     @注释汉化: Young Lee (李旸)
+
 (function() {
 
 	// Baseline setup
 	// --------------
 
-	// Establish the root object, `window` in the browser, or `exports` on the server.
+	// 映射 this 到 root 上，root 在浏览器中是 window，在服务器中是 exports
 	var root = this;
 
-	// Save the previous value of the `_` variable.
+	// 如果之前有 _ 全局变量，那么把这个全局变量转存为 previousUnderscore
 	var previousUnderscore = root._;
 
 	// Save bytes in the minified (but not gzipped) version:
 	var ArrayProto = Array.prototype, ObjProto = Object.prototype, FuncProto = Function.prototype;
 
-	// Create quick reference variables for speed access to core prototypes.
+	// 一些 JavaScript 原生的方法的快捷方式
 	var
     push             = ArrayProto.push,
     slice            = ArrayProto.slice,
@@ -32,7 +34,11 @@
     nativeKeys         = Object.keys,
     nativeBind         = FuncProto.bind;
 
-	// Create a safe reference to the Underscore object for use below.
+	/**
+	 * 一个 scope safe 的构造器，返回已有的 Underscore 实例或创建一个 Underscore 实例
+	 * @param { Object } obj Underscore 对象或新 Underscore 对象的初始化参数
+	 * @returns { Object } Underscore 实例
+	 */
 	var _ = function(obj) {
 		if (obj instanceof _) return obj;
 		if (!(this instanceof _)) return new _(obj);
@@ -51,7 +57,7 @@
 		root._ = _;
 	}
 
-	// Current version.
+	// 版本号
 	_.VERSION = '1.7.0';
 
 	// Internal function that returns an efficient (for current engines) version

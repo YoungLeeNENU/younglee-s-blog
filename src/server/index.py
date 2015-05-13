@@ -34,9 +34,10 @@ class Application(tornado.web.Application):
     def __init__(self):
         # Navigator
         handlers = [(r"/", ylpn),
-                    (r"/eshell", eshell),
-                    (r"/leemail", blogemail),
-                    (r"/whoami", whoami)]
+                    # (r"/eshell", eshell),
+                    # (r"/leemail", blogemail),
+                    # (r"/whoami", whoami)
+        ]
         # Resources
         settings = dict(
             template_path = os.path.join(os.path.dirname(__file__), options.templates),
