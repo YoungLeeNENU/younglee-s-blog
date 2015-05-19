@@ -10,16 +10,62 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 import tornado.httputil
+import json
 
 from tornado.options import define, options
 
 from resources import LeemacsResources as resources
 
 class youngleePersonalNetwork(tornado.web.RequestHandler):
-    def __init(self):    # __init 不是自动执行的
-        self._domain = ['外殼', '博文', '圖志', '電郵', '關於']    # 这个应该从数据库中获得
     def get(self):
-        self.render('ylpn.html', domain = "* 外殼 *")
+        self.render('ylpn.html',
+                    domain = self.get_domain_str(0),
+                    domains = self.get_domain(),
+                    test = self._domain,
+                    jsonload = json.loads,
+                    jsondump = json.dumps,
+        )
+    def get_domain(self):
+        JSONdomain = {
+            '攻殼': {
+                'type': 'd',
+                'group': 'rwxr--r--',
+                'author': 'young lee',
+                'size': 4096,
+            },
+            '博文': {
+                'type': 'd',
+                'group': 'rwxr--r--',
+                'author': 'young lee',
+                'size': 4096,
+            },
+            '圖志': {
+                'type': 'd',
+                'group': 'rwxr--r--',
+                'author': 'young lee',
+                'size': 4096,
+            },
+            '電郵': {
+                'type': 'd',
+                'group': 'rwxr--r--',
+                'author': 'young lee',
+                'size': 4096,
+            },
+            '關於': {
+                'type': '-',
+                'group': 'rwxr--r--',
+                'author': 'young lee',
+                'size': 0,
+            }    # 这个应该从数据库中获得
+        }
+        self._domain = json.dumps(JSONdomain)
+        return ['攻殼', '博文', '圖志', '電郵', '關於']
+    def get_domain_str(self, dft = 0):
+        """
+        dft: 默认的域
+	"""
+        domain_info = self.get_domain()[dft]
+        domain_str  = " ".join(["*", domain_info, "*"])
+        return domain_str
     def write_error(self, status_code, **kwargs):
         self.write(status_code, "Operation is not defined.")
-

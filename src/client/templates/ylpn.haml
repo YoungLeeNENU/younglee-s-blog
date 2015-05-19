@@ -23,6 +23,12 @@
 {% end %}
 
 {% block domain %}
+-# {% for x in domains %}
+-# %input{:class => "domains", :name => "{{ x }}", :style => "display: none;"}
+-# {% end %}
+{% for x in jsonload(test).keys() %}
+%input{:class => "domains", :name => "{{ x }}", :style => "display: none;"}
+{% end %}
 {{ domain }}
 {% end %}
 

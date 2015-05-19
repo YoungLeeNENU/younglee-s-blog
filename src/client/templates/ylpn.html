@@ -20,8 +20,11 @@
 <span id='pn-txt'>Personal Network</span>
 {% end %}
 {% block domain %}
+{% for x in jsonload(test).keys() %}
+<input class='domains' name='{{ x }}' style='display: none;'>
+{% end %}
 {{ domain }}
 {% end %}
 {% block dynamic_script %}
-<script src="{{ static_url('js/page/homepage/homepage.js') }}" type='text/javascript'></script>
+<script src='{{ static_url('js/page/homepage/homepage.js') }}' type='text/javascript'></script>
 {% end %}
