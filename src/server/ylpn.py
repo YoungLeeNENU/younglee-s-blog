@@ -27,36 +27,11 @@ class youngleePersonalNetwork(tornado.web.RequestHandler):
         )
     def get_domain(self):
         JSONdomain = {
-            '攻殼': {
-                'type': 'd',
-                'group': 'rwxr--r--',
-                'author': 'young lee',
-                'size': 4096,
-            },
-            '博文': {
-                'type': 'd',
-                'group': 'rwxr--r--',
-                'author': 'young lee',
-                'size': 4096,
-            },
-            '圖志': {
-                'type': 'd',
-                'group': 'rwxr--r--',
-                'author': 'young lee',
-                'size': 4096,
-            },
-            '電郵': {
-                'type': 'd',
-                'group': 'rwxr--r--',
-                'author': 'young lee',
-                'size': 4096,
-            },
-            '關於': {
-                'type': '-',
-                'group': 'rwxr--r--',
-                'author': 'young lee',
-                'size': 0,
-            }    # 这个应该从数据库中获得
+            '攻殼': "d:rwxr--r--:younglee:4096",
+            '博文': "d:rwxr--r--:younglee:4096",
+            '圖志': "d:rwxr--r--:younglee:4096",
+            '電郵': "d:rwxr--r--:younglee:4096",
+            '關於': "-:rwxr--r--:younglee:0"    # 这个应该从数据库中获得
         }
         self._domain = json.dumps(JSONdomain)
         return ['攻殼', '博文', '圖志', '電郵', '關於']
