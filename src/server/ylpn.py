@@ -22,3 +22,4 @@ class youngleePersonalNetwork(tornado.web.RequestHandler):
         self.render('ylpn.html', domain = "* 外殼 *")
     def write_error(self, status_code, **kwargs):
         self.write(status_code, "Operation is not defined.")
+
