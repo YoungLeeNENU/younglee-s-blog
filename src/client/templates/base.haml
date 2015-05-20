@@ -19,7 +19,13 @@
       {% block frame %}{% end %}
       %div{:id => "homepage-txt"}
         {% block homepage %}{% end %}
+      %div{:id => "touch-title"}
+        {% block ttitle %}{% end %}
+      %div{:id => "touch-count"}
+        {% block tcount %}{% end %}
     -# minibuffer
+    %ul{:id => "tmenu"}
+      {% block tmenu %}{% end %}
     %div{:id => "minibuffer"}
       %div{:id => "mb-menu"}
         %div{:id => "share", :title => "分享"}

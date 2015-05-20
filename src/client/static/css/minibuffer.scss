@@ -73,4 +73,7 @@ $mb-zi: $base-zi + 4;
         height: 31px;
 		display: block;
 	}
+    @include iphone6 {
+    	display: none;
+    }
 }

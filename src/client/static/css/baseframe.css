@@ -6,6 +6,25 @@
   padding: 10px 10px 10px 10px;
   height: 100%;
   z-index: 1; }
+  #base-frame #touch-title {
+    display: none; }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) {
+      #base-frame #touch-title {
+        display: block; }
+        #base-frame #touch-title #tylpn {
+          color: yellow;
+          font-family: monaco;
+          font-size: 48px;
+          background-color: #006400; } }
+  #base-frame #touch-count {
+    display: none; }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) {
+      #base-frame #touch-count {
+        display: block; }
+        #base-frame #touch-count #tamount {
+          color: white;
+          font-family: monaco;
+          font-size: 48px; } }
   #base-frame #homepage-txt {
     z-index: 3;
     position: fixed;
@@ -13,6 +32,9 @@
     margin-top: -127px;
     width: 100%;
     left: 0px; }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) {
+      #base-frame #homepage-txt {
+        display: none; } }
     #base-frame #homepage-txt #yl-txt {
       text-align: center;
       padding-top: 10px;
@@ -26,6 +48,9 @@
     height: 28px;
     display: block;
     padding-top: 4px; }
+    @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) {
+      #base-frame .edit-line {
+        display: none; } }
     #base-frame .edit-line .user {
       font-family: DejaVu Sans Mono;
       font-size: 16px; }
@@ -36,5 +61,31 @@
       height: 19px;
       display: inline;
       padding-left: 8px; }
+
+#tmenu {
+  display: none; }
+  @media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (-webkit-device-pixel-ratio: 2) {
+    #tmenu {
+      display: block;
+      list-style: none; }
+      #tmenu .domains {
+        cursor: pointer; }
+        #tmenu .domains .titem {
+          color: white; }
+          #tmenu .domains .titem .item-span {
+            font-family: monaco;
+            font-size: 48px; }
+          #tmenu .domains .titem .sp {
+            margin-right: 6px; }
+          #tmenu .domains .titem .read {
+            background-color: #b22222; }
+          #tmenu .domains .titem .write {
+            background-color: #32cd32; }
+          #tmenu .domains .titem .exe {
+            background-color: #daa520; }
+          #tmenu .domains .titem .nil {
+            background-color: #696969; }
+          #tmenu .domains .titem .tdomain {
+            color: #ffd700; } }
 
 /*# sourceMappingURL=baseframe.css.map */

@@ -17,7 +17,16 @@
       <div id='homepage-txt'>
         {% block homepage %}{% end %}
       </div>
+      <div id='touch-title'>
+        {% block ttitle %}{% end %}
+      </div>
+      <div id='touch-count'>
+        {% block tcount %}{% end %}
+      </div>
     </div>
+    <ul id='tmenu'>
+      {% block tmenu %}{% end %}
+    </ul>
     <div id='minibuffer'>
       <div id='mb-menu'>
         <div id='share' title='分享'>
@@ -25,9 +34,7 @@
         </div>
         <ul class='menu' id='site-menu'>
           <li class='menu-li'>
-            <a class='domain' href='javascript:void(0)'>
-              {% block domain %}{% end %}
-            </a>
+            <a class='domain' href='javascript:void(0)'>{% block domain %}{% end %}</a>
           </li>
           <li class='menu-li'>
             <span class='time'>&nbsp;</span>

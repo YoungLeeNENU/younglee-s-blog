@@ -9,7 +9,33 @@ $hp-zi: $base-zi + 2;
 	padding: 10px 10px 10px 10px;
     height: 100%;
 	z-index: $base-zi;
+    #touch-title {
+		@include iphone6 {
+	        display: block;
+		    #tylpn {
+		        color: yellow;
+	            font-family: monaco;
+			    font-size: 48px;
+		        background-color: #006400;
+	        }
+        }
+		display: none;
+	}
+    #touch-count {
+		@include iphone6 {
+	        display: block;
+	        #tamount {
+		        color: white;
+	            font-family: monaco;
+			    font-size: 48px;			 
+		    }
+        }
+		display: none;
+	}
     #homepage-txt {
+	    @include iphone6 {
+	        display: none;
+        }
 		z-index: $hp-zi;
 		position: fixed;
         top: 50%;
@@ -28,6 +54,9 @@ $hp-zi: $base-zi + 2;
     	}
 	}
     .edit-line {
+	    @include iphone6 {
+	        display: none;
+        }		
 		width: 100%;
         height: 28px;
 		display: block;
@@ -46,4 +75,40 @@ $hp-zi: $base-zi + 2;
             padding-left: 8px;
 		}
 	}
+}
+
+#tmenu {
+	display: none;
+	@include iphone6 {
+	    display: block;
+	    list-style: none;
+        .domains {
+	    	cursor: pointer;
+            .titem {
+                color: white;
+				.item-span {
+		            font-family: monaco;
+			        font-size: 48px;
+	            }
+	    		.sp {
+	                margin-right: 6px;
+                }
+	    		.read {
+	                background-color: #b22222;
+                }
+	    		.write {
+	                background-color: #32cd32;
+                }
+	    		.exe {
+	                background-color: #daa520;
+                }
+	    		.nil {
+	                background-color: #696969;
+                } 
+	    		.tdomain {
+	                color: #ffd700;
+                }
+	        }
+	    }
+    }
 }
