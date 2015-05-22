@@ -57,13 +57,7 @@
       </div>
       <div id='mb-content'></div>
     </div>
-    <script src="{{ static_url('js/tools/jquery-2.1.0.min.js') }}" type='text/javascript'></script>
-    <script src="{{ static_url('js/tools/underscore-min.js') }}" type='text/javascript'></script>
-    <script src="{{ static_url('js/tools/backbone-min.js') }}" type='text/javascript'></script>
-    <script src="{{ static_url('js/common/heartbeat.js') }}" type='text/javascript'></script>
-    <script src="{{ static_url('js/common/time.js') }}" type='text/javascript'></script>
-    <script src="{{ static_url('js/common/cursor.js') }}" type='text/javascript'></script>
-    <script src="{{ static_url('js/common/keyctrl.js') }}" type='text/javascript'></script>
+	<script type="text/javascript" src="{{ static_url('js/require.js') }}" async="true" data-main="{{ static_url('js/main') }}" defer></script>
     {% block dynamic_script %}{% end %}
   </body>
 </html>

@@ -46,9 +46,11 @@
             %a{:href => "javascript:void(0)", } &#xf01bc;
       %div{:id => "mb-content"}
     -# js files
-    %script{:type => "text/javascript", :src => "{{ static_url('js/tools/jquery-2.1.0.min.js') }}"}
-    %script{:type => "text/javascript", :src => "{{ static_url('js/tools/underscore-min.js') }}"}
-    %script{:type => "text/javascript", :src => "{{ static_url('js/tools/backbone-min.js') }}"}
+    :escaped
+      <script type="text/javascript" src="{{ static_url('js/require.js') }}" async="true" data-main="{{ static_url('js/main') }}" defer></script>
+    -# %script{:type => "text/javascript", :src => "{{ static_url('js/tools/jquery-2.1.0.min.js') }}"}
+    -# %script{:type => "text/javascript", :src => "{{ static_url('js/tools/underscore-min.js') }}"}
+    -# %script{:type => "text/javascript", :src => "{{ static_url('js/tools/backbone-min.js') }}"}
     %script{:type => "text/javascript", :src => "{{ static_url('js/common/heartbeat.js') }}"}
     %script{:type => "text/javascript", :src => "{{ static_url('js/common/time.js') }}"}
     %script{:type => "text/javascript", :src => "{{ static_url('js/common/cursor.js') }}"}
