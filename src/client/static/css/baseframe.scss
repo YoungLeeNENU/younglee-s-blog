@@ -15,7 +15,7 @@ $hp-zi: $base-zi + 2;
 		    #tylpn {
 		        color: yellow;
 	            font-family: monaco;
-			    font-size: 48px;
+			    font-size: 44px;
 		        background-color: #006400;
 	        }
         }
@@ -27,7 +27,7 @@ $hp-zi: $base-zi + 2;
 	        #tamount {
 		        color: white;
 	            font-family: monaco;
-			    font-size: 48px;			 
+			    font-size: 44px;			 
 		    }
         }
 		display: none;
@@ -83,12 +83,12 @@ $hp-zi: $base-zi + 2;
 	    display: block;
 	    list-style: none;
         .domains {
-	    	cursor: pointer;
+			cursor: pointer;
             .titem {
                 color: white;
 				.item-span {
 		            font-family: monaco;
-			        font-size: 48px;
+			        font-size: 40px;
 	            }
 	    		.sp {
 	                margin-right: 6px;
@@ -104,10 +104,18 @@ $hp-zi: $base-zi + 2;
                 }
 	    		.nil {
 	                background-color: #696969;
-                } 
+                }
+				.size {
+		            color: #ffec8b;
+			        min-width: 96px;
+	            }
 	    		.tdomain {
 	                color: #ffd700;
                 }
+				.tdir {
+		            background-color: #4d4d4d;
+			        color: #79cdcd;
+	            }
 	        }
 	    }
     }

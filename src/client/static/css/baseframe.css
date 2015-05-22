@@ -14,7 +14,7 @@
         #base-frame #touch-title #tylpn {
           color: yellow;
           font-family: monaco;
-          font-size: 48px;
+          font-size: 44px;
           background-color: #006400; } }
   #base-frame #touch-count {
     display: none; }
@@ -24,7 +24,7 @@
         #base-frame #touch-count #tamount {
           color: white;
           font-family: monaco;
-          font-size: 48px; } }
+          font-size: 44px; } }
   #base-frame #homepage-txt {
     z-index: 3;
     position: fixed;
@@ -74,7 +74,7 @@
           color: white; }
           #tmenu .domains .titem .item-span {
             font-family: monaco;
-            font-size: 48px; }
+            font-size: 40px; }
           #tmenu .domains .titem .sp {
             margin-right: 6px; }
           #tmenu .domains .titem .read {
@@ -85,7 +85,13 @@
             background-color: #daa520; }
           #tmenu .domains .titem .nil {
             background-color: #696969; }
+          #tmenu .domains .titem .size {
+            color: #ffec8b;
+            min-width: 96px; }
           #tmenu .domains .titem .tdomain {
-            color: #ffd700; } }
+            color: #ffd700; }
+          #tmenu .domains .titem .tdir {
+            background-color: #4d4d4d;
+            color: #79cdcd; } }
 
 /*# sourceMappingURL=baseframe.css.map */
