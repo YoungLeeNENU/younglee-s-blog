@@ -35,7 +35,7 @@ class youngleePersonalNetwork(tornado.web.RequestHandler):
             '關於': "-:rwxr--r--:younglee:0"    # 这个应该从数据库中获得
         }
         self._domain = json.dumps(JSONdomain)
-        return ['攻殼', '博文', '圖志', '電郵', '關於']
+        return ['攻殼', '博文', '翻译', '圖志', '電郵', '關於']
     def get_domain_str(self, dft = 0):
         """
         dft: 默认的域
