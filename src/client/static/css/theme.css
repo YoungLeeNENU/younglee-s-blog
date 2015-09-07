@@ -1,9 +1,13 @@
-d@font-face {
+@font-face {
   font-family: 'iconfont';
   src: url("../image/icon/iconfont.eot");
-  /* IE9*/
-  src: url("../image/icon/iconfont.eot?#iefix") format("embedded-opentype"), url("../image/icon/iconfont.woff") format("woff"), url("../image/icon/iconfont.ttf") format("truetype"), url("../image/icon/iconfont.svg#iconfont") format("svg");
-  /* iOS 4.1- */ }
+  src: url("../image/icon/iconfont.eot?#iefix") format("embedded-opentype"), url("../image/icon/iconfont.woff") format("woff"), url("../image/icon/iconfont.ttf") format("truetype"), url("../image/icon/iconfont.svg#iconfont") format("svg"); }
+@font-face {
+  font-family: 'Fixedsys';
+  src: url("../font/FSEX300.ttf"); }
+@font-face {
+  font-family: 'SourceCodePro';
+  src: url("../font/SourceCodePro-Regular.ttf"); }
 .no-select, #homepage-txt, .edit-line, #minibuffer #mb-menu {
   -moz-user-select: none;
   -webkit-user-select: none;
@@ -12,18 +16,19 @@ d@font-face {
   user-select: none; }
 
 body {
-  background-color: #161A1F; }
+  background-color: #161A1F;
+  font-family: Helvetica Neue, Helvetica, SourceCodePro, Roboto, "Hiragino Sans GB", "STHeiti", sans-serif; }
 
 #ylpn {
   display: none; }
 
 .yl-theme {
-  font-family: DejaVu Serif;
   font-weight: bold;
   font-size: 94px;
   color: #ee4000; }
 
 #yl-txt, #yl-s {
+  font-family: Fixedsys;
   text-shadow: 3px 3px 3px black; }
 
 #yl-dot {
@@ -31,7 +36,7 @@ body {
 
 #pn-txt {
   display: block;
-  font-family: DejaVu Serif;
+  font-family: Fixedsys;
   font-weight: bold;
   font-size: 94px;
   color: #4682b4;
@@ -40,10 +45,12 @@ body {
 #blink-cursor {
   background-color: #ee4000; }
 
-.edit-line .user {
-  color: beige; }
-.edit-line .path {
-  color: beige; }
+.edit-line {
+  font-family: SourceCodePro; }
+  .edit-line .user {
+    color: beige; }
+  .edit-line .path {
+    color: beige; }
 
 .mb-icons, #minibuffer #mb-menu #links #hotkey-icon, #minibuffer #mb-menu #links #douban-icon, #minibuffer #mb-menu #links #github-icon, #minibuffer #mb-menu #links #rss-icon {
   color: #cccccc;
@@ -89,13 +96,11 @@ body {
     #minibuffer #site-menu .domain {
       color: #cccccc;
       font-weight: bold;
-      font-family: DejaVu Serif; }
+      font-family: SourceCodePro; }
       #minibuffer #site-menu .domain:hover {
         background-color: black;
         color: #f8f8ff; }
     #minibuffer #site-menu .time {
       color: #cccccc;
       font-weight: bold;
-      font-family: DejaVu Serif; }
-
-/*# sourceMappingURL=theme.css.map */
+      font-family: SourceCodePro; }

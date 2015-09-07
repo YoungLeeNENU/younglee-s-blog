@@ -24,7 +24,6 @@ class youngleePersonalNetwork(tornado.web.RequestHandler):
                     test = self._domain,
                     jsonload = json.loads,
                     jsondump = json.dumps,
-                    
         )
     def get_domain(self):
         JSONdomain = {

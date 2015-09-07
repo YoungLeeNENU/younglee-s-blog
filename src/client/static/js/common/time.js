@@ -4,17 +4,16 @@
  * @author YoungLee youngleemails@gmail.com
  * @license MIT
  */
+define(function (time) {
+    $('#minibuffer .time').pseudoheartbeat(1000, function () {
+        // Construct
+        var timer = new Date(),
+            date = timer.toLocaleDateString(),
+            time = timer.getHours() + ":" + timer.getMinutes() + ":" + timer.getSeconds();
 
-$(document).ready(function () {
-	$('#minibuffer .time').pseudoheartbeat(1000, function () {
-		// Construct
-		var timer = new Date(),
-			date = timer.toLocaleDateString(),    // for spare
-			time = timer.getHours() + ":" + timer.getMinutes() + ":" + timer.getSeconds();    // for spare
-		
-		$(this).text(timer.toLocaleString());
-		
-		// Deconstruct
-		timer = null;
-	});
+        $(this).text(timer.toLocaleString());
+
+        // Deconstruct
+        timer = null;
+    });
 });

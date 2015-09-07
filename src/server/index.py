@@ -23,7 +23,7 @@ from resources import LeemacsResources as resources
 
 # Globals
 define("port", default = 8888, help = "run on the given port", type = int)
-define("templates", default = "../client/templates/", help = "template files path", type = str)
+define("templates", default = "../client/templates/html/", help = "template files path", type = str)
 define("static", default = "../client/static/", help = "static files path", type = str)
 define("blogs", default = "../server/blogs/", help = "blog files path", type = str)
 

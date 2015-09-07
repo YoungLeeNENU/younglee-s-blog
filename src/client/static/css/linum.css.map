@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": ";;AAKA,MAAO;EACN,OAAO,EAHG,CAAY;EAItB,QAAQ,EAAE,KAAK;EACZ,IAAI,EAAE,GAAG;EACZ,GAAG,EAAE,GAAG;EACL,MAAM,EAAE,IAAI;EACf,KAAK,EAAE,IAAI;EACR,YAAY,EAAE,iBAAiB",
-"sources": ["linum.scss"],
-"names": [],
-"file": "linum.css"
-}

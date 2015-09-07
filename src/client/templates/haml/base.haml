@@ -1,0 +1,48 @@
+!!! 5
+%html
+  %head
+    {% block res %}{% end %}
+    %link(rel="stylesheet" href="{{ static_url('css/theme.css') }}" type="text/css" media="screen")
+    %link(rel="stylesheet" href="{{ static_url('css/minibuffer.css') }}" type="text/css" media="screen")
+    %link(rel="stylesheet" href="{{ static_url('css/baseframe.css') }}" type="text/css" media="screen")
+    %link(rel="stylesheet" href="{{ static_url('css/linum.css') }}" type="text/css" media="screen")
+    %link(rel="icon" href="{{ static_url('image/ylpn.ico') }}" type="image/png")
+    {% block title %}
+    %title { YLPN }
+    {% end %}
+  %body
+    %div(id="base-frame")
+      {% block frame %}{% end %}
+      %div(id="homepage-txt")
+        {% block homepage %}{% end %}
+      %div(id="touch-title")
+        {% block ttitle %}{% end %}
+      %div(id="touch-count")
+        {% block tcount %}{% end %}
+    %ul(id="tmenu")
+      {% block tmenu %}{% end %}
+    %div(id="minibuffer")
+      %div(id="mb-menu")
+        %div(id="share" title="分享")
+          %i(id="share-icon") &#xf012f;
+        %ul(id="site-menu" class="menu")
+          %li(class="menu-li")
+            %a(class="domain" href="javascript:void(0)") {% block domain %}{% end %}
+          %li(class="menu-li")
+            %span(class="time") &nbsp;
+        %div(id="links")
+          %i(title="帮助" class="link-to" id="hotkey-icon") 
+            %a(href="javascript:void(0)") &#xf0143;
+          %i(title="豆瓣" class="link-to" id="douban-icon")
+            %a(href="http://www.douban.com/people/lee_young/") 豆
+          %i(title="github" class="link-to" id="github-icon") 
+            %a(href="https://github.com/YoungLeeNENU") &#xf01ca;
+          %i(title="订阅" class="link-to" id="rss-icon")
+            %a(href="javascript:void(0)") &#xf01bc;
+      %div(id="mb-content")
+    %script(type="text/javascript" src="{{ static_url('js/require.js') }}" async="true" data-main="{{ static_url('js/main') }}" defer="defer")
+    -# %script(type="text/javascript" src="{{ static_url('js/common/heartbeat.js') }}")
+    -# %script(type="text/javascript" src="{{ static_url('js/common/time.js') }}")
+    -# %script(type="text/javascript" src="{{ static_url('js/common/cursor.js') }}")
+    -# %script(type="text/javascript" src="{{ static_url('js/common/keyctrl.js') }}")
+    {% block dynamic_script %}{% end %}
