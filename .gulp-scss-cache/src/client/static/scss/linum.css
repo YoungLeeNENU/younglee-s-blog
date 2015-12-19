@@ -1,12 +1,35 @@
-@charset "UTF-8";
-/*! 行号区域 */
-#linum {
-  z-index: 4;
-  position: fixed;
-  left: 0px;
-  top: 0px;
-  height: 100%;
-  width: 24px;
-  border-right: 5px solid #3D3D3D; }
+/*
+Error: Invalid US-ASCII character "\xE8"
+        on line 1 of /Users/younglee/Documents/project/younglee-s-blog/src/client/static/scss/linum.scss
 
-/*# sourceMappingURL=linum.css.map */
+1: /*! 行号区域 *\/
+2: @import "media-queries";
+3: $base-zi: 1;
+4: $linum-zi: $base-zi + 3;
+5: 
+6: #linum {
+
+Backtrace:
+/Users/younglee/Documents/project/younglee-s-blog/src/client/static/scss/linum.scss:1
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/util.rb:1337:in `rescue in block in find_encoding_error'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/util.rb:1334:in `block in find_encoding_error'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/util.rb:1333:in `each'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/util.rb:1333:in `each_with_index'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/util.rb:1333:in `find_encoding_error'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/util.rb:910:in `check_sass_encoding'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:433:in `check_encoding!'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:389:in `_to_tree'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/exec/sass_scss.rb:410:in `run'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/exec/sass_scss.rb:63:in `process_result'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/exec/base.rb:52:in `parse'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/lib/sass/exec/base.rb:19:in `parse!'
+/usr/local/lib/ruby/gems/2.2.0/gems/sass-3.4.16/bin/scss:13:in `<top (required)>'
+/usr/local/bin/scss:23:in `load'
+/usr/local/bin/scss:23:in `<main>'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid US-ASCII character \"\xE8\"\A         on line 1 of /Users/younglee/Documents/project/younglee-s-blog/src/client/static/scss/linum.scss\A \A 1: /*! 行号区域 */\A 2: @import \"media-queries\";\A 3: $base-zi: 1;\A 4: $linum-zi: $base-zi + 3;\A 5: \A 6: #linum {"; }

@@ -7,8 +7,8 @@ $mb-zi: $base-zi + 4;
 @font-face { font-family: 'iconfont';
     src: url("../image/icon/iconfont.eot"); /* IE9*/
     src: url('../image/icon/iconfont.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
-    url('../image/icon/iconfont.woff') format('woff'), /* chrome、firefox */
-    url('../image/icon/iconfont.ttf') format('truetype'), /* chrome、firefox、opera、Safari, Android, iOS 4.2+*/
+    url('../image/icon/iconfont.woff') format('woff'),
+    url('../image/icon/iconfont.ttf') format('truetype'),
     url('../image/icon/iconfont.svg#iconfont') format('svg'); /* iOS 4.1- */
 }
 
@@ -26,10 +26,12 @@ $mb-zi: $base-zi + 4;
         line-height: 33px;
         box-sizing: border-box;
 			#share {
-	            display: inline;
+	            display: inline-block;
 	            position: relative;
 			    cursor: pointer;
-	            padding: 10px 16px 8px 16px;
+	            /* padding: 10px 16px 8px 16px; */
+			    height: 32px;
+                height: 32px;	
             }
 			#site-menu {
 	            display: inline;
