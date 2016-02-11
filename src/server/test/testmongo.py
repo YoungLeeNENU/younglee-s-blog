@@ -32,4 +32,5 @@ result = db.restaurants.insert_one(
         "restaurant_id": "41704620"
     }
 )
+
 print result.inserted_id

@@ -10,6 +10,7 @@ css/*.css
 *.patch
 *.diff
 *.err
+*.pyc
 
 # temp file for git conflict merging
 *.orig

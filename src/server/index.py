@@ -14,30 +14,29 @@ import tornado.web
 
 from tornado.options import define, options
 
-from ylpn import youngleePersonalNetwork as ylpn
-from eshell import ylpnEshellHandler as eshell
-from whoami import manPageHandler as whoami
-from leemail import blogEmailHandler as blogemail
+from ylpn    import youngleePersonalNetwork as ylpn
+from eshell  import ylpnEshellHandler       as eshell
+from whoami  import manPageHandler          as whoami
+from leemail import blogEmailHandler        as blogemail
 
 from resources import LeemacsResources as resources
 
 # Globals
-define("port", default = 8888, help = "run on the given port", type = int)
-define("templates", default = "../client/templates/html/", help = "template files path", type = str)
-define("static", default = "../client/static/", help = "static files path", type = str)
-define("blogs", default = "../server/blogs/", help = "blog files path", type = str)
+define("port",      default = 8888,                        help = "Run on the given port", type = int)
+define("templates", default = "../client/templates/html/", help = "Template files path",   type = str)
+define("static",    default = "../client/static/",         help = "Static files path",     type = str)
+define("blogs",     default = "../server/blogs/",          help = "Blog files path",       type = str)
 
 class Application(tornado.web.Application):
     '''
-    定义 URL 导航和资源位置
+    Url Navigation
     '''
     def __init__(self):
         # Navigator
-        handlers = [(r"/", ylpn),
-                    # (r"/eshell", eshell),
-                    # (r"/leemail", blogemail),
-                    # (r"/whoami", whoami)
-        ]
+        handlers = [ (r"/",        ylpn),         # Index page
+                     (r"/eshell",  eshell),       # Operations on eshell
+                     (r"/leemail", blogemail),    # Email me
+                     ("/whoami",   whoami) ]      # Man page
         # Resources
         settings = dict(
             template_path = os.path.join(os.path.dirname(__file__), options.templates),
@@ -48,6 +47,9 @@ class Application(tornado.web.Application):
 
 if __name__ == "__main__":
     tornado.options.parse_command_line()
-    http_server = tornado.httpserver.HTTPServer(Application())    # Load application
-    http_server.listen(options.port)    # Listen to given port
-    tornado.ioloop.IOLoop.instance().start()    # Start application
+    # Load application
+    http_server = tornado.httpserver.HTTPServer(Application())
+    # Listen to given port
+    http_server.listen(options.port)
+    # Start application
+    tornado.ioloop.IOLoop.instance().start()
