@@ -17,8 +17,14 @@ from resources import LeemacsResources as resources
 
 class ylpnEshellHandler(tornado.web.RequestHandler):
     def get(self):
+        # print self.get_argument('a')
+        # print self.get_argument('b')
         greeting = self.get_argument('commond: ', 'ls, ')
-        self.write(greeting + 'man, whoami...')
+        test = {
+            'a': 1,
+            'b': 2
+        }
+        self.write(test)
     def post(self):
         text = self.get_argument('text')
         width = self.get_argument('width', 40)

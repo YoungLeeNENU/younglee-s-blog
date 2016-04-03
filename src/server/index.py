@@ -14,11 +14,7 @@ import tornado.web
 
 from tornado.options import define, options
 
-from ylpn    import youngleePersonalNetwork as ylpn
-from eshell  import ylpnEshellHandler       as eshell
-from whoami  import manPageHandler          as whoami
-from leemail import blogEmailHandler        as blogemail
-
+from site_navigator import SiteNavigator
 from resources import LeemacsResources as resources
 
 # Globals
@@ -33,10 +29,8 @@ class Application(tornado.web.Application):
     '''
     def __init__(self):
         # Navigator
-        handlers = [ (r"/",        ylpn),         # Index page
-                     (r"/eshell",  eshell),       # Operations on eshell
-                     (r"/leemail", blogemail),    # Email me
-                     ("/whoami",   whoami) ]      # Man page
+        site_nav = SiteNavigator()
+        handlers = site_nav.get_handlers()
         # Resources
         settings = dict(
             template_path = os.path.join(os.path.dirname(__file__), options.templates),

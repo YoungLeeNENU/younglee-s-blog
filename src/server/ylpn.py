@@ -10,6 +10,7 @@ import tornado.ioloop
 import tornado.options
 import tornado.web
 import tornado.httputil
+import tornado.escape
 import json
 
 from tornado.options import define, options
@@ -19,9 +20,10 @@ from resources import LeemacsResources as resources
 class youngleePersonalNetwork(tornado.web.RequestHandler):
     def get(self):
         self.render('ylpn.html',
-                    domain = self.get_domain_str(0),
-                    domains = self.get_domain(),
-                    test = self._domain,
+                    domain   = self.get_domain_str(0),
+                    domains  = self.get_domain(),
+                    test     = self._domain,
+                    myvar    = tornado.escape.json_encode({ 'a': True, 'b': 2 }),
                     jsonload = json.loads,
                     jsondump = json.dumps,
         )
@@ -34,7 +36,7 @@ class youngleePersonalNetwork(tornado.web.RequestHandler):
             '關於': "-:rwxr--r--:younglee:0"    # 这个应该从数据库中获得
         }
         self._domain = json.dumps(JSONdomain)
-        return ['攻殼', '博文', '翻译', '圖志', '電郵', '關於']
+        return [ '攻殼', '博文', '翻译', '圖志', '電郵', '關於' ]
     def get_domain_str(self, dft = 0):
         """
         dft: 默认的域
