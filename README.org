@@ -1,49 +1,19 @@
-* TODO YoungLee's Blog
-** Using
-*** Server side                                                      :python:
-**** TODO Tornado
-- http://www.tornadoweb.org/
-- 使用 tornado 作为服务端框架
-*** Browser side                                                 :JavaScript:
-**** TODO Jquery and JqueryUI
-- http://jquery.com/
-- http://jqueryui.com/
-  - 使用 jquery/jquery ui 作为基础页面操作库
-**** TODO Redux
-- http://backbonejs.org/
-- 使用 redux 作为前端框架
-**** TODO React
-- http://danieltao.com/lazy.js/
-- 使用 react 作为前端 view 层
-**** TODO Webpack
-- http://gruntjs.com/
-- 使用 webpack 搭建前端项目
-** leemacs　首页
-*** M-x leeshell 进入 leeshell 导航页
-**** man/whoami 进入我的简历页面
-**** ls/ll 显示当前目录下的子项
-**** cd 进入下级子目录
-**** douban 跳转到我的豆瓣
-**** zhihu 跳转到我的知乎
-**** stackoverflow 跳转到我的 stackoverflow
-**** github 跳转到我的 github
-**** clear 清屏
-**** podcast 我的播客面页
-**** C-x d 进入当前目录的 dired 页面
-**** C-x f 打开当前目录的某个叶子页面
-*** M-x leemail 进入 leemail 发邮件页面
-*** dired 页面
-** 功能
-*** 博客
-- 评论
-- 标注
-*** 简历
-**** man 手册
-*** RSS
-*** 图片
-*** 子项目
-** 状态码页
-*** 400
-*** 404
-*** 405
-*** 500
+* Young Lee's Personal Network
+*** Tech Stack
+**** Server side                                                     :Python:
+***** Tornado
+- Tornado web framework
+***** Graphene
+- Graphql in python
+**** Browser side                                                       :ES6:
+***** jQuery and jQuery UI
+- jQuery and jQuery UI as a basic library
+***** Redux
+- Redux handles 'M' and 'C'
+***** React
+- React handles 'V'
+***** Relay
+- Relay handle some request
+***** Tools
+- Webpack
+- Gulp
