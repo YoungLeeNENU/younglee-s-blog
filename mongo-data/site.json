@@ -1,0 +1,19 @@
+{
+	"name": "Young Lee's Personal Network"
+	"author": "Young Lee",
+	"email" "youngleemails@gmail.com",
+	"modules": [{
+		"name": "blog",
+		"active": true
+	}, {
+		"name": "gallery",
+		"active": true
+	}, {
+		"name": "info",
+		"active": true
+	}, {
+		"name": "terminal",
+		"active": true
+	}],
+	"root": "/root"
+}
