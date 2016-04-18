@@ -5,6 +5,7 @@
 - Tornado web framework
 ***** Graphene
 - Graphql in python
+***** MongoDb
 **** Browser side                                                       :ES6:
 ***** jQuery and jQuery UI
 - jQuery and jQuery UI as a basic library
