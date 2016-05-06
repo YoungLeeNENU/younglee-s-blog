@@ -8,24 +8,29 @@
 
 import os
 import sys
-import json
 import os.path
 
 from pymongo import MongoClient
 
+sys.path.append('../config')              # 配置目录
+
+from config import ConfigUtils            # 
+
 class MongoUtils(object):
-    def __init__(self, config = None):
+    def __init__(self, dft_config = None):
         """
         MongoDb operations
         """
-        if config == None:
-            self.config = {               # Default
-                "username": "younglee",   # User
-                "host": "108.61.160.134", # Server Ip
-                "port": 27017,            # Server Port
-                "db":   "blog-site"       # Using db
-            }
-        else: self.config = config
+        # self.
+        if dft_config == None:
+            self.config = ConfigUtils.get_json_config(ConfigUtils.db_config)
+            # {               # Default
+            #     "username": "younglee",   # User
+            #     "host": "108.61.160.134", # Server Ip
+            #     "port": 27017,            # Server Port
+            #     "db":   "blog-site"       # Using db
+            # }
+        else: self.config = dft_config
     def get_config(self, key = None):
         """
         Get specific configuration
