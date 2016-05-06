@@ -15,6 +15,7 @@
 - React handles 'V'
 ***** Relay
 - Relay handle some request
+***** Service Worker
 ***** Tools
 - Webpack
 - Gulp

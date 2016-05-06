@@ -18,9 +18,9 @@ from whoami  import manPageHandler          as whoami
 
 class Navigator(object):
     def __init__(self):
-        self._handlers = [ (r"/",        ylpn),         # Homepage
-                           (r"/eshell",  eshell),       # Console
-                           # (r"/leemail", blogemail),    # Email me
-                           ("/whoami",   whoami) ]      # CV
+        self._handlers = [ (r"/",        ylpn),      # Homepage
+                           (r"/eshell",  eshell),    # Console
+                           # (r"/leemail", blogemail), # Email me
+                           ("/whoami",   whoami) ]   # CV
     def get_handlers(self):
         return self._handlers
