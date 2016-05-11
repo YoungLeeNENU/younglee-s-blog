@@ -16,7 +16,7 @@ sys.path.append('../config')              # 配置目录
 
 from config import ConfigUtils
 
-class MongoUtils(object):
+class MongoBase(object):
     def __init__(self, dft_config = None):
         """
         MongoDb operations
@@ -36,7 +36,7 @@ class MongoUtils(object):
                 return self.config[key]
             except KeyError:
                 return {}
-    def db_connect(self, host = None, port = None):
+    def db_connect(self, host = None, port = None):   # 加上多用户要重写
         """
         @brief: Connect to MongoDb
         """
@@ -48,14 +48,15 @@ class MongoUtils(object):
         """
         @brief: Disconnect to MongoDb
         """
-        if client == None:
-            print 'No client assigned'
-            return 0
-        else:
-            return 1
+        try:
+            client.close();
+            print dir(client)
+        except:
+            print 'Close connection failed'
+            return -1
         
 
-if __name__ == '__main__':
-    test = MongoUtils()
-    # print test._get_config()
-    print test.db_connect()
+# if __name__ == '__main__':
+#     test = MongoBase()
+#     client = test.db_connect()
+#     test.db_disconnect(client)
