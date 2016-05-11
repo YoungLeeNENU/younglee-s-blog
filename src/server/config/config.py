@@ -10,23 +10,26 @@ import os
 import sys
 import os.path
 
-# sys.path.append('gitignore')    # 隐私文件
+sys.path.append('gitignore')    # 隐私文件
 
 class ConfigUtils(object):
     """
     Operate configuration files
     """
     def __init__(self, ):
-        self.db_config = "./gitignore/db.json"
+        self.db_config = file("./gitignore/db.json")
     def get_json_config(self, target_file):
+        
         """
         Get Json configuration file, and return a dictionary
         """
-        try: 
+        try:
+            if isinstance(target_file, str):
+                target_file = file(target_file)
             import simplejson as json # 引入 simplejson 用来 json 文件的解析
             
             try: 
-                json_obj = json.load(file(target_file))
+                json_obj = json.load(target_file)
                 return json_obj
             except:
                 print 'Error JSON reading with simplejson'
@@ -35,8 +38,10 @@ class ConfigUtils(object):
             print 'No module installed named simplejson'
             import json
             
-            try: 
-                json_obj = json.load(file(target_file))
+            try:
+                if isinstance(target_file, str):
+                    target_file = file(target_file)
+                json_obj = json.load(target_file)
                 return json.dumps(json_obj)
             except:
                 print 'Error JSON reading with json'

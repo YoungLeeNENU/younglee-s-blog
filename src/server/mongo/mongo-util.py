@@ -14,23 +14,17 @@ from pymongo import MongoClient
 
 sys.path.append('../config')              # 配置目录
 
-from config import ConfigUtils            # 
+from config import ConfigUtils
 
 class MongoUtils(object):
     def __init__(self, dft_config = None):
         """
         MongoDb operations
         """
-        # self.
         if dft_config == None:
-            self.config = ConfigUtils.get_json_config(ConfigUtils.db_config)
-            # {               # Default
-            #     "username": "younglee",   # User
-            #     "host": "108.61.160.134", # Server Ip
-            #     "port": 27017,            # Server Port
-            #     "db":   "blog-site"       # Using db
-            # }
-        else: self.config = dft_config
+            config_utils = ConfigUtils()
+            self.config = config_utils.get_json_config(config_utils.db_config)
+        else: self.config = dft_config    # 如果有默认的配置使用之
     def get_config(self, key = None):
         """
         Get specific configuration
@@ -51,8 +45,6 @@ class MongoUtils(object):
         client = MongoClient(host + ":" + str(port))
         return client
 
-if __name__ == '__main__':
-    test = MongoUtils()
-    # print test.get_config()
-    instance = test.db_connect()
-    print dir(instance)
+# if __name__ == '__main__':
+#     test = MongoUtils()
+#     print test.get_config('')
