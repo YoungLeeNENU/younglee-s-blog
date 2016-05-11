@@ -10,18 +10,22 @@ import os
 import sys
 import os.path
 
+from resources import SiteResources as BaseResources
+
 sys.path.append('gitignore')    # 隐私文件
 
 class ConfigUtils(object):
     """
-    Operate configuration files
+    @brief: Operate configuration files
     """
     def __init__(self, ):
-        self.db_config = file("./gitignore/db.json")
-    def get_json_config(self, target_file):
+        baseResources = BaseResources()
+        
+        self.db_config = file(baseResources.get_db_config_file())
+    def parse_json_config(self, target_file):
         
         """
-        Get Json configuration file, and return a dictionary
+        @brief: Get Json configuration file, and return a dictionary
         """
         try:
             if isinstance(target_file, str):
@@ -47,9 +51,6 @@ class ConfigUtils(object):
                 print 'Error JSON reading with json'
                 return False
 
-            
-## Test
 # if __name__ == '__main__':
 #     sample = ConfigUtils()
-#     print sample.db_config
-#     print sample.get_json_config(sample.db_config)
+#     print sample.parse_json_config(sample.db_config)

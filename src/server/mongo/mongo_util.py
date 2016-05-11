@@ -23,11 +23,11 @@ class MongoUtils(object):
         """
         if dft_config == None:
             config_utils = ConfigUtils()
-            self.config = config_utils.get_json_config(config_utils.db_config)
+            self.config = config_utils.parse_json_config(config_utils.db_config)
         else: self.config = dft_config    # 如果有默认的配置使用之
-    def get_config(self, key = None):
+    def _get_config(self, key = None):
         """
-        Get specific configuration
+        @brief: Get specific configuration
         """
         if key == None:
             return self.config
@@ -38,13 +38,24 @@ class MongoUtils(object):
                 return {}
     def db_connect(self, host = None, port = None):
         """
-        Connect to MongoDb
+        @brief: Connect to MongoDb
         """
-        host = host or self.get_config('host')
-        port = port or self.get_config('port')
+        host = host or self._get_config('host')
+        port = port or self._get_config('port')
         client = MongoClient(host + ":" + str(port))
         return client
+    def db_disconnect(self, client):
+        """
+        @brief: Disconnect to MongoDb
+        """
+        if client == None:
+            print 'No client assigned'
+            return 0
+        else:
+            return 1
+        
 
-# if __name__ == '__main__':
-#     test = MongoUtils()
-#     print test.get_config('')
+if __name__ == '__main__':
+    test = MongoUtils()
+    # print test._get_config()
+    print test.db_connect()
