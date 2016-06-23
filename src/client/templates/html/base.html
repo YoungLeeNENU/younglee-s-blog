@@ -29,11 +29,9 @@
 			<div id="mb-content"></div>
 		</div>
 		<script type="text/javascript" async="true" defer="defer">
-         var elem = document.createElement('textarea');
-         elem.innerHTML = "{{ myvar }}";
-         var myvar = elem.value;
-         elem.innerHTML = "{{ another }}";
-         var another = elem.value;
+            var elem = document.createElement('textarea');    /* To decode &quot; and others */
+            elem.innerHTML = "{{ myvar }}";var myvar = elem.value;
+            elem.innerHTML = "{{ another }}";var another = elem.value;
 		</script>
 		<script type="text/javascript" src="{{ static_url('js/require.js') }}" async="true" data-main="{{ static_url('js/main') }}" defer="defer"></script>
 		{% block dynamic_script %}{% end %}
