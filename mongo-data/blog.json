@@ -1,6 +1,10 @@
 {
 	"name": "blog",
 	"module": "blog",
-	"location": "",
-	"backup": ""
+	"db": "ylpn-site",
+	"collection": "ylpn-blog",
+	"pathname": "/var/ylpn/blog/",
+	"backup": "/var/ylpn/backup/blog/",
+	"refresh-feq": 1000,
+	"children": []
 }

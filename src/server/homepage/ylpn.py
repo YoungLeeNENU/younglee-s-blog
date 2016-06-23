@@ -12,6 +12,7 @@ import tornado.web
 import tornado.httputil
 import tornado.escape
 import json
+# import simplejson as json # 引入 simplejson 用来 json 文件的解析
 
 from tornado.options import define, options
 
@@ -24,6 +25,7 @@ class youngleePersonalNetwork(tornado.web.RequestHandler):
                     domains  = self.get_domain(),
                     test     = self._domain,
                     myvar    = tornado.escape.json_encode({ 'a': True, 'b': 2 }),
+                    another  = tornado.escape.json_encode({ 'c': {}, 'd': 'String' }), # test
                     jsonload = json.loads,
                     jsondump = json.dumps,
         )

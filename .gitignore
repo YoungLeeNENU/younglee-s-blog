@@ -43,3 +43,4 @@ gitignore/
 
 # Finally
 build/
+mongo-data/

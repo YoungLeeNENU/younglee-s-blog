@@ -9,8 +9,10 @@
 import os
 import sys
 import os.path
+import datetime
 
-from pymongo import MongoClient
+from pymongo       import MongoClient
+from bson.objectid import ObjectId
 
 sys.path.append('../config')              # 配置目录
 
@@ -50,13 +52,66 @@ class MongoBase(object):
         """
         try:
             client.close();
-            print dir(client)
         except:
             print 'Close connection failed'
             return -1
-        
+    def insert_doc(self, insert_type = "normal"):
+        """
+        @brief: Insert
+        """
+        if insert_type == "normal":
+            pass
+        elif insert_type == "bulk":
+            pass
+        else:
+            print "Not a valid insert type"
+            return
+    def update_doc(self):
+        """
+        @brief: Update
+        """
+        pass
+    def save_doc(self):
+        """
+        @brief: Save
+        """
+        pass
+    def querying_one(self, cond):
+        """
+        @breif: querying_one
+        """
+        pass
+    def querying_many(self, cond):
+        """
+        @breif: querying_many
+        """
+        pass
+    def counting(self, bson):
+        """
+        @brief: 
+        """
+        return bson.count()
 
-# if __name__ == '__main__':
-#     test = MongoBase()
-#     client = test.db_connect()
-#     test.db_disconnect(client)
+                
+if __name__ == '__main__':
+    test = MongoBase()
+    
+    client = test.db_connect('127.0.0.1', 27017)   # connect db
+    
+    db = client['a'];           # use a
+    
+    # for x in dir(db):
+    #     print x
+    # print db, db.name
+    
+    post = {
+        "author": "Mike",
+        "text": "My first blog post!",
+        "tags": ["mongodb", "python", "pymongo"],
+        "date": datetime.datetime.utcnow()
+    }
+    posts = db.a                                         # use posts
+    print posts, posts.name
+    post_id = posts.insert_one(post).inserted_id # db.posts.insert(...)
+    print posts.find({ 'author': 'Mike' }).count()   # db.posts.find()
+    test.db_disconnect(client)
