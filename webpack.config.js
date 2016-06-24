@@ -24,8 +24,10 @@ module.exports = {
 	resolve: {
 		alias: { 'react': pathToReact }
 	},
+    cache: true,
+    devtool: 'source-map',
     output: {
-	    path: path.resolve(__dirname, 'build'),
+	    path: path.resolve(__dirname, 'src/client/static/build'),
 	    filename: 'bundle.js'
     },
     module: {

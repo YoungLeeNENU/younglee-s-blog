@@ -40,6 +40,7 @@ thumbs.db
 node_modules/
 jscoverage_lib/
 gitignore/
+node_modules/
 
 # Finally
 build/

@@ -22,10 +22,10 @@ from navigator import Navigator
 from resources import LeemacsResources as resources
 
 # Globals
-define("port",      default = 8888,                        help = "Run on the given port", type = int)
-define("templates", default = "../client/templates/html/", help = "Template files path",   type = str)
-define("static",    default = "../client/static/",         help = "Static files path",     type = str)
-define("blogs",     default = "../server/blogs/",          help = "Blog files path",       type = str)
+define("port", default = 8888, help = "Run on the given port", type = int)
+define("templates", default = "../client/templates/html/", help = "Template files path", type = str)
+define("static", default = "../client/static/", help = "Static files path", type = str)
+define("blogs", default = "../server/blogs/", help = "Blog files path", type = str)
 
 class Application(tornado.web.Application):
     '''
