@@ -12,7 +12,10 @@ import os.path
 
 from resources import SiteResources as BaseResources
 
-sys.path.append('gitignore')    # 隐私文件
+root = '/root/Documents/my-blog/src/server/'
+# root = '/Users/younglee/Documents/project/github/younglee-s-blog/src/server/'
+
+sys.path.insert(0, root + 'config/gitignore')    # 隐私文件
 
 class ConfigUtils(object):
     """
@@ -20,10 +23,10 @@ class ConfigUtils(object):
     """
     def __init__(self, ):
         baseResources = BaseResources()
-        
+
         self.db_config = file(baseResources.get_db_config_file())
     def parse_json_config(self, target_file):
-        
+
         """
         @brief: Get Json configuration file, and return a dictionary
         """
@@ -31,8 +34,8 @@ class ConfigUtils(object):
             if isinstance(target_file, str):
                 target_file = file(target_file)
             import simplejson as json # 引入 simplejson 用来 json 文件的解析
-            
-            try: 
+
+            try:
                 json_obj = json.load(target_file)
                 return json_obj
             except:
@@ -41,7 +44,7 @@ class ConfigUtils(object):
         except ImportError:
             print 'No module installed named simplejson'
             import json
-            
+
             try:
                 if isinstance(target_file, str):
                     target_file = file(target_file)

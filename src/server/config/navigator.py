@@ -3,18 +3,22 @@
 import os
 import sys
 
-sys.path.append('../')          # 根目录
-sys.path.append('homepage')     # 主页
-sys.path.append('console')      # 控制台
-sys.path.append('gallery')      # 图片
-sys.path.append('blog')         # 博客
-sys.path.append('cv')           # 简历
-sys.path.append('test')         # 测试
+root = '/root/Documents/my-blog/src/server/'
+# root = '/Users/younglee/Documents/project/github/younglee-s-blog/src/server/'
 
-from ylpn    import youngleePersonalNetwork as ylpn
+# sys.path.insert('../')          # 根目录
+sys.path.insert(0, root + 'homepage')     # 主页
+sys.path.insert(0, root + 'console')      # 控制台
+sys.path.insert(0, root + 'gallery')      # 图片
+sys.path.insert(0, root + 'blog')         # 博客
+sys.path.insert(0, root + 'cv')           # 简历
+sys.path.insert(0, root + 'test')         # 测试
+
+# from leemail import blogEmailHandler        as blogemail
 from eshell  import ylpnEshellHandler       as eshell
 from whoami  import manPageHandler          as whoami
-# from leemail import blogEmailHandler        as blogemail
+from ylpn    import youngleePersonalNetwork as ylpn
+
 
 class Navigator(object):
     def __init__(self):
