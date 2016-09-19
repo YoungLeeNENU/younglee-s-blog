@@ -48,7 +48,7 @@ class Application(tornado.web.Application):
 if __name__ == "__main__":
     tornado.options.parse_command_line()
     # Load application
-    http_server = tornado.httpserver.HTTPServer(Application(), xheaders = True)
+    http_server = tornado.httpserver.HTTPServer(Application())
     # Listen to given port
     http_server.listen(options.port)
     # Start application
