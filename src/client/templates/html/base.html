@@ -10,11 +10,19 @@
 		<meta name="apple-mobile-web-app-title" content="YoungLee's Personal Network">
 		<meta name="Keywords" content="YLPN Blog YoungLee Young Lee Personal Network"/>
 		<meta name="Description" content="YoungLee's Personal Network YoungLee Blog"/>
-		<link rel="stylesheet" href="{{ static_url('css/theme.css') }}" type="text/css" media="screen" />
+
+		<link rel="stylesheet" href="http://youngleehua.com/static/css/theme.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="http://youngleehua.com/static/css/minibuffer.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="http://youngleehua.com/static/css/baseframe.css" type="text/css" media="screen" />
+		<link rel="stylesheet" href="http://youngleehua.com/static/css/linum.css" type="text/css" media="screen" />
+		<link rel="icon"       href="http://youngleehua.com/static/image/ylpn.ico" type="image/png" />{% block title %}
+
+		<!-- <link rel="stylesheet" href="{{ static_url('css/theme.css') }}" type="text/css" media="screen" />
 		<link rel="stylesheet" href="{{ static_url('css/minibuffer.css') }}" type="text/css" media="screen" />
 		<link rel="stylesheet" href="{{ static_url('css/baseframe.css') }}" type="text/css" media="screen" />
 		<link rel="stylesheet" href="{{ static_url('css/linum.css') }}" type="text/css" media="screen" />
-		<link rel="icon" href="{{ static_url('image/ylpn.ico') }}" type="image/png" />{% block title %}
+		<link rel="icon" href="{{ static_url('image/ylpn.ico') }}" type="image/png" /> -->
+		{% block title %}
 		<title>{ YLPN }</title>{% end %}</head>
 	<body>
 		<div id="base-frame">{% block frame %}{% end %}
@@ -41,7 +49,8 @@
             elem.innerHTML = "{{ myvar }}";var myvar = elem.value;
             elem.innerHTML = "{{ another }}";var another = elem.value;
 		</script>
-		<script type="text/javascript" src="{{ static_url('js/require.js') }}" async="true" data-main="{{ static_url('js/main') }}" defer="defer"></script>
+		<script type="text/javascript" src="http://youngleehua.com/static/js/require.js" async="true" data-main="{{ static_url('js/main') }}" defer="defer"></script>
+		<!-- <script type="text/javascript" src="{{ static_url('js/require.js') }}" async="true" data-main="{{ static_url('js/main') }}" defer="defer"></script> -->
 		{% block dynamic_script %}{% end %}
 	</body>
 

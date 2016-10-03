@@ -40,7 +40,7 @@ class Application(tornado.web.Application):
         # Resources
         settings = dict(
             template_path = os.path.join(os.path.dirname(__file__), options.templates),
-            static_path = os.path.join(os.path.dirname(__file__), options.static),
+            static_path = os.path.join(os.path.dirname(__file__), options.static), # 指定 static path
             debug = True    # TODO: Comment this when the site is done
         )
         tornado.web.Application.__init__(self, handlers, **settings)
