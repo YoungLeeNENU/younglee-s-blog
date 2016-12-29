@@ -2,18 +2,20 @@
 #!/usr/bin/python
 import os
 import sys
+import simplejson as json
 
-# root = '/root/Documents/my-blog/src/server/'
-root = '/Users/younglee/Documents/project/github/younglee-s-blog/src/server/'
+env_file = file('/var/ylpn/env.json')
+env_obj = json.load(env_file)
+root = ''
+if env_obj['env'] == 'dev': root += '/Users/younglee/Documents/project/github/younglee-s-blog/'
+elif env_obj['env'] == 'product': root += '/root/Documents/my-blog/'
 
-# sys.path.insert('../')          # 根目录
-sys.path.insert(0, root + 'homepage')     # 主页
-sys.path.insert(0, root + 'console')      # 控制台
-sys.path.insert(0, root + 'gallery')      # 图片
-sys.path.insert(0, root + 'blog')         # 博客
-sys.path.insert(0, root + 'cv')           # 简历
-sys.path.insert(0, root + 'test')         # 测试
-
+sys.path.insert(0, root + 'src/server/homepage') # 主页
+sys.path.insert(0, root + 'src/server/console')  # 控制台
+sys.path.insert(0, root + 'src/server/gallery')  # 图片
+sys.path.insert(0, root + 'src/server/blog')     # 博客
+sys.path.insert(0, root + 'src/server/cv')       # 简历
+sys.path.insert(0, root + 'src/server/test')     # 测试
 
 # from leemail import blogEmailHandler        as blogemail
 from eshell  import ylpnEshellHandler       as eshell

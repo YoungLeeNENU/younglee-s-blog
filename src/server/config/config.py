@@ -12,11 +12,6 @@ import os.path
 
 from resources import SiteResources as BaseResources
 
-# root = '/root/Documents/my-blog/src/server/'
-# root = '/Users/younglee/Documents/project/github/younglee-s-blog/src/server/'
-
-# sys.path.insert(0, root + 'config/gitignore')    # 隐私文件
-
 class ConfigUtils(object):
     """
     @brief: Operate configuration files
