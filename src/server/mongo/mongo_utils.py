@@ -11,7 +11,7 @@ import sys
 import os.path
 
 # Third Party
-from pymongo    import MongoClient
+from pymongo  import MongoClient
 
 # Local
 from mongo_base import MongoBase
@@ -21,7 +21,7 @@ class MongoUtils(MongoBase):
         pass
     def get_database(self):
         """
-        @brief: 
+        @brief:
         """
         pass
 

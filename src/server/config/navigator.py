@@ -3,8 +3,8 @@
 import os
 import sys
 
-root = '/root/Documents/my-blog/src/server/'
-# root = '/Users/younglee/Documents/project/github/younglee-s-blog/src/server/'
+# root = '/root/Documents/my-blog/src/server/'
+root = '/Users/younglee/Documents/project/github/younglee-s-blog/src/server/'
 
 # sys.path.insert('../')          # 根目录
 sys.path.insert(0, root + 'homepage')     # 主页
@@ -18,13 +18,15 @@ sys.path.insert(0, root + 'test')         # 测试
 # from leemail import blogEmailHandler        as blogemail
 from eshell  import ylpnEshellHandler       as eshell
 from whoami  import manPageHandler          as whoami
+from reframe import ReframeHandler          as reframe
 from ylpn    import youngleePersonalNetwork as ylpn
 
 class Navigator(object):
     def __init__(self):
-        self._handlers = [ (r"/",        ylpn),      # Homepage
-                           (r"/eshell",  eshell),    # Console
+        self._handlers = [ (r"/", reframe),      # Homepage
+                           (r"/eshell", eshell),    # Console
                            # (r"/leemail", blogemail), # Email me
-                           ("/whoami",   whoami) ]
+                           ("/whoami", whoami),
+                           ("/old", ylpn) ]
     def get_handlers(self):
         return self._handlers

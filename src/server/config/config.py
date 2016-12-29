@@ -12,10 +12,10 @@ import os.path
 
 from resources import SiteResources as BaseResources
 
-root = '/root/Documents/my-blog/src/server/'
+# root = '/root/Documents/my-blog/src/server/'
 # root = '/Users/younglee/Documents/project/github/younglee-s-blog/src/server/'
 
-sys.path.insert(0, root + 'config/gitignore')    # 隐私文件
+# sys.path.insert(0, root + 'config/gitignore')    # 隐私文件
 
 class ConfigUtils(object):
     """
@@ -53,7 +53,3 @@ class ConfigUtils(object):
             except:
                 print 'Error JSON reading with json'
                 return False
-
-# if __name__ == '__main__':
-#     sample = ConfigUtils()
-#     print sample.parse_json_config(sample.db_config)

@@ -10,8 +10,8 @@ import sys
 import os.path
 
 # sys.path.append('config')       # 配置
-sys.path.insert(0, '/root/Documents/my-blog/src/server/config')
-# sys.path.insert(0, '/Users/younglee/Documents/project/github/younglee-s-blog/src/server/config')
+# sys.path.insert(0, '/root/Documents/my-blog/src/server/config')
+sys.path.insert(0, '/Users/younglee/Documents/project/github/younglee-s-blog/src/server/config')
 
 import tornado.httpserver
 import tornado.ioloop
