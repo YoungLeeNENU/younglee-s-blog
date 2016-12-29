@@ -20,15 +20,15 @@ sys.path.insert(0, root + 'src/server/test')     # 测试
 # from leemail import blogEmailHandler        as blogemail
 from eshell  import ylpnEshellHandler       as eshell
 from whoami  import manPageHandler          as whoami
-from reframe import ReframeHandler          as reframe
+# from reframe import ReframeHandler          as reframe
 from ylpn    import youngleePersonalNetwork as ylpn
 
 class Navigator(object):
     def __init__(self):
-        self._handlers = [ (r"/", reframe),      # Homepage
+        self._handlers = [ (r"/", ylpn),      # Homepage
                            (r"/eshell", eshell),    # Console
                            # (r"/leemail", blogemail), # Email me
-                           ("/whoami", whoami),
-                           ("/old", ylpn) ]
+                           ("/whoami", whoami)
+                           # ("/old", ylpn) ]
     def get_handlers(self):
         return self._handlers
