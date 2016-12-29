@@ -28,7 +28,6 @@ class Navigator(object):
         self._handlers = [ (r"/", ylpn),      # Homepage
                            (r"/eshell", eshell),    # Console
                            # (r"/leemail", blogemail), # Email me
-                           ("/whoami", whoami)
-                           # ("/old", ylpn) ]
+                           ("/whoami", whoami) ]
     def get_handlers(self):
         return self._handlers
