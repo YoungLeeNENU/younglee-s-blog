@@ -8,7 +8,7 @@ env_file = file('/var/ylpn/env.json')
 env_obj = json.load(env_file)
 root = ''
 if env_obj['env'] == 'dev': root += '/Users/younglee/Documents/project/github/younglee-s-blog/'
-elif env_obj['env'] == 'product': root += '/root/Documents/my-blog/'
+elif env_obj['env'] == 'product': root += '/var/www/my-blog/'
 
 sys.path.insert(0, root + 'src/server/homepage') # 主页
 sys.path.insert(0, root + 'src/server/console')  # 控制台
