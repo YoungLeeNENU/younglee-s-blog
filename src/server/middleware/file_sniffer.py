@@ -7,47 +7,81 @@
 # @license GPL V3
 import os, sys
 import hashlib
-import os.path
 import traceback
-import time
 import threading
-import daemon
+from copy import deepcopy
+from time import sleep, ctime
 
 root = '/var/ylpn/ylpn-data/'
 
+class ThreadCtrl(threading.Thread):
+    """ """
+    def __init__(self, func, args, name = ''):
+        """ """
+        threading.Thread.__init__(self)
+        self.func = func
+        self.args = args
+        self.name = name
+    def run(self, ):
+        """ """
+        self.func(self.args)
+
 class FileSniffer():
-    """ File Sniffering """
+    """
+    File Sniffering
+    """
     def __init__(self, ):
-        """ Construct """
-        self.files_record = None
-        self.threads = []
-    def sniffering(self, file_change_cb = None):
-        """ Sniffering for file/folder changes """
+        self.files_record = []
+    def sniffering(self, dirpath):
+        """
+        嗅探文件的修改
+        """
         while True:
             try:
-                print 'sniffering...'
-                record = self._walk() # 一次 walk 的结果
-                print record
+                print '... Sniffering ...'
+                record = self._walk(dirpath) # 一次 walk 的结果
+                # print record
                 if self.files_record == record:
                     pass
                 else:
                     self._diff(self.files_record, record)
                     self.files_record = record
-                time.sleep(10)
+                sleep(1)
             except Exception:
                 break
+    # def dft_file_change_callback():
+    #     """
+    #     [yas] elisp error: Symbol's value as variable is void: text
+    #     """
+    #     pass
     def _diff(self, cache, record):
-        """ Diffing between files and folders """
-        print "diffing..."
-    def _walk(self, ):
-        """ Walking through the folders """
+        """
+        检查最新更新的文件
+        """
+        print record
+        _cache, _record = deepcopy(cache), deepcopy(record)
+        _cache.reverse()
+        _record.reverse()
+        print "... Diffing ..."
+    def _walk(self, dirpath):
+        """
+        遍历指定的路径
+        """
         files_record = []
         def path_adjust(raw_path):
             if raw_path[-1:] == '/': return raw_path
             else: return raw_path + '/'
+        def exclude_rule(name):
+            """
+            排除 emacs 和 vi/vim 的编辑态下的临时文件
+	    """
+            if name[:2] == '.#': return False # emacs
+            if name[-4:] == '.swp': return False # vi/vim
+            return True
         try:
-            for e in os.walk(root):
-                dirpath, dirnames, raw_filenames, filenames = e[0], e[1], e[2], []
+            for e in os.walk(dirpath):
+                # print e
+                dirpath, dirnames, raw_filenames, filenames = e[0], e[1], filter(exclude_rule, e[2]), []
                 for f in raw_filenames:
                     fp = open(path_adjust(dirpath) + f, 'rb')
                     md5obj = hashlib.md5()
@@ -57,14 +91,44 @@ class FileSniffer():
                                   'md5': hash_key }
                     filenames.append(file_info)
                 files_record.append({ 'dirpath': dirpath,
-                                           'dirnames': dirnames,
-                                           'filenames': filenames })
+                                      'dirnames': dirnames,
+                                      'filenames': filenames })
         except Exception, e:
-            # TODO: 这里不太清楚应该放什么处理方式
-            print 'can\'t walk'
+            traceback.print_exc()
         return files_record
+
+class DaemonicFileSniffer():
+    """
+    """
+    def __init__(self, ):
+        """
+        """
+        self.f_sniffer = FileSniffer()
+        self.thread = []        # 线程池
+        t = ThreadCtrl(self.f_sniffer.sniffering, (root), self.f_sniffer.sniffering.__name__)
+        self.thread.append(t)
+    def start(self, daemonic):
+        """
+        开始运行一个线程
+        """
+        self.thread[0].setDaemon(daemonic)
+        self.thread[0].start()
+    def isAlive(self, ):
+        """
+        判断线程是否还在运行
+        """
+        return self.thread[0].isAlive()
+    def join(self, timeout = None):
+        """
+        主线程挂起，直到线程池里的线程结束，timeout 是挂起时间
+        """
+        self.thread[0].join(timeout)
 
 # Test
 if __name__ == '__main__':
     f_sniffer = FileSniffer()
-    f_sniffer.sniffering()
+    f_sniffer.sniffering(root)
+    # file_sniffer = DaemonicFileSniffer()
+    # file_sniffer.start(False)
+
+    # file_sniffer.join(4)
