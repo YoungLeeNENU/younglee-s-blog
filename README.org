@@ -6,16 +6,10 @@
 ***** Graphene
 - Graphql in python
 ***** MongoDb
-**** Browser side                                                       :ES6:
-***** jQuery and jQuery UI
-- jQuery and jQuery UI as a basic library
-***** Redux
-- Redux handles 'M' and 'C'
-***** React
-- React handles 'V'
-***** Relay
-- Relay handle some request
-***** Service Worker
-***** Tools
-- Webpack
-- Gulp
+***** Flask
+*** Notes
+**** git add empty folders
+
+#+BEGIN_EXAMPLE
+find . \( -type d -empty \) -and \( -not -regex ./\.git.* \) -exec touch {}/.gitkeep \;
+#+END_EXAMPLE
